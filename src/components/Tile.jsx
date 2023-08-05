@@ -1,4 +1,4 @@
-import {Box, Card, CardActionArea, CardContent, Typography} from "@mui/material"
+import {Box, Card, CardActionArea, Typography} from "@mui/material"
 import {makeStyles} from "@mui/styles"
 import {useGrid} from "../GridContext";
 import {v4 as uuid} from 'uuid';

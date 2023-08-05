@@ -53,8 +53,8 @@ export function setNewTrackingCoordinates(x, y) {
 export function addResult(tiles, trackingResult) {
   const trackingX = trackingResult.x,
     trackingY = trackingResult.y;
-  for(const [y, row] of tiles.entries()) {
-    for(const [x, location] of row.entries()) {
+  for(const row of tiles.values()) {
+    for(const location of row.values()) {
       // Is location in FOV of the tracking result?
       if (location.inFieldOfView(trackingX, trackingY)) {
         // If so, update names

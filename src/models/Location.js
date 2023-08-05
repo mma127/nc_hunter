@@ -1,5 +1,4 @@
 import {FOV_LENGTH} from "../components/TileGrid";
-import _ from "lodash";
 
 export class Location {
   constructor(x, y) {
@@ -31,8 +30,6 @@ export class Location {
   removeNames(names) {
     this.excludeNames(names)
     if (this.names) {
-      // const without = _.without(this.names, ...names)
-      // this.names = without
       this.updateNames(this.names)
     }
   }
