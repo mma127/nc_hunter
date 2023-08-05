@@ -8,10 +8,15 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '7rem',
     minWidth: '7rem',
     margin: '0.25rem',
-    '&.selected': {
+    '&.starting': {
       borderSize: '0.5px',
       borderStyle: 'solid',
-      borderColor: theme.palette.warning.dark
+      borderColor: theme.palette.error.dark
+    },
+    '&.nonstarting': {
+      borderSize: '0.5px',
+      borderStyle: 'solid',
+      borderColor: theme.palette.error.main
     }
   },
   cardActionArea: {
@@ -23,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '0.5rem !important',
   },
   trackedName: {
-    color: theme.palette.warning.dark,
+    color: theme.palette.warning.main,
     textAlign: "right",
     alignSelf: 'flex-end'
   }
@@ -38,17 +43,28 @@ const Names = ({names}) => {
   )
 }
 
-export const Tile = ({x, y}) => {
+export const Tile = ({x, y, handleClick}) => {
   console.log("Render Tile")
   const classes = useStyles();
   const grid = useGrid();
   const tile = grid.tiles.get(y).get(x)
   const isStartingTile = grid.initialResult.x === x && grid.initialResult.y === y;
+  let isNonStartingTrackingTile
+  if (!isStartingTile) {
+    isNonStartingTrackingTile = grid.trackingResults.some(result => result.x === x && result.y === y)
+  } else {
+    isNonStartingTrackingTile = false
+  }
+
   const revealedNames = tile.names
 
+  const onClick = () => {
+    handleClick(x, y)
+  }
+
   return (
-    <Card className={`${classes.wrapper} ${isStartingTile ? "selected" : null} `}>
-      <CardActionArea className={classes.cardActionArea}>
+    <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}>
+      <CardActionArea className={classes.cardActionArea} onClick={onClick}>
         <Box>
           <Typography>[{x},{y}]</Typography>
         </Box>

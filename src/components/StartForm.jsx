@@ -35,7 +35,6 @@ const schema = yup.object().shape({
 
 export const StartForm = () => {
   const classes = useStyles();
-  const gridDetails = useGrid();
   const dispatch = useGridDispatch()
 
   const {reset, handleSubmit, control, formState: {errors}} = useForm({

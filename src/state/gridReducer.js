@@ -1,9 +1,8 @@
 import {useReducer} from "react";
 
 export const INITIAL_STATE = {
-  x: null,
-  y: null,
-  revealedNames: [],
+  currentX: null,
+  currentY: null,
   initialResult: null,
   trackingResults: [],
   tiles: null
@@ -16,6 +15,22 @@ export function gridReducer(grid, action) {
         ...grid,
         initialResult: action.data.initialResult,
         trackingResults: [...grid.trackingResults, action.data.initialResult],
+        tiles: action.data.tiles
+      }
+    }
+    case 'set_tracking_coordinates': {
+      return {
+        ...grid,
+        currentX: action.data.x,
+        currentY: action.data.y
+      }
+    }
+    case 'add_result': {
+      return {
+        ...grid,
+        currentX: null,
+        currentY: null,
+        trackingResults: [...grid.trackingResults, action.data.result],
         tiles: action.data.tiles
       }
     }

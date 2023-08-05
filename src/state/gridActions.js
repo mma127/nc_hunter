@@ -39,3 +39,43 @@ export function addInitialResult(initialResult) {
     },
   }
 }
+
+export function setNewTrackingCoordinates(x, y) {
+  return {
+    type: "set_tracking_coordinates",
+    data: {
+      x: x,
+      y: y
+    }
+  }
+}
+
+export function addResult(tiles, trackingResult) {
+  const trackingX = trackingResult.x,
+    trackingY = trackingResult.y;
+  for(const [y, row] of tiles.entries()) {
+    for(const [x, location] of row.entries()) {
+      // Is location in FOV of the tracking result?
+      if (location.inFieldOfView(trackingX, trackingY)) {
+        // If so, update names
+        location.updateNames(trackingResult.names)
+      } else {
+        // If not, remove tracking result names from location names
+        location.removeNames(trackingResult.names)
+      }
+    }
+  }
+
+  return {
+    type: "add_result",
+    data: {
+      result: trackingResult,
+      tiles: tiles
+    },
+  }
+}
+
+export function resetGrid() {
+  return {type: "reset"}
+}
+
