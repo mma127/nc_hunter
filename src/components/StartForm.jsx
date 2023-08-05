@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
     margin: "0.5rem"
   },
   namesInput: {
-    width: "24rem"
+    width: "26rem"
   }
 }))
 
