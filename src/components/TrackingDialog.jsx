@@ -3,7 +3,7 @@ import * as yup from "yup";
 import {Controller, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {TrackingResult} from "../models/TrackingResult";
-import {addInitialResult, addResult} from "../state/gridActions";
+import {addResult} from "../state/gridActions";
 import {useGrid, useGridDispatch} from "../GridContext";
 import {makeStyles} from "@mui/styles";
 

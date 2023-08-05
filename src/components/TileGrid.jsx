@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Button, Container, Grid, Modal, Typography} from "@mui/material"
+import {Box, Button, Container, Grid} from "@mui/material"
 import {Tile} from "./Tile";
 
 import {useGrid, useGridDispatch} from "../GridContext"

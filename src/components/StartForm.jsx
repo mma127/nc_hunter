@@ -3,7 +3,7 @@ import {Controller, useForm} from "react-hook-form"
 import * as yup from "yup"
 import {yupResolver} from "@hookform/resolvers/yup";
 
-import {useGrid, useGridDispatch} from "../GridContext"
+import {useGridDispatch} from "../GridContext"
 import {makeStyles} from "@mui/styles";
 import {TrackingResult} from "../models/TrackingResult";
 import {addInitialResult} from "../state/gridActions";
@@ -37,7 +37,7 @@ export const StartForm = () => {
   const classes = useStyles();
   const dispatch = useGridDispatch()
 
-  const {reset, handleSubmit, control, formState: {errors}} = useForm({
+  const {handleSubmit, control, formState: {errors}} = useForm({
     resolver: yupResolver(schema),
   })
 
