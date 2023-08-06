@@ -4,6 +4,7 @@ export class Location {
   constructor(x, y) {
     this.x = x;
     this.y = y;
+    this.names = [];
     this.excludedNames = new Set();
   }
 
@@ -12,11 +13,21 @@ export class Location {
   }
 
   updateNames(names) {
-    this.names = names.filter(name => !this.isNameExcluded(name))
+    if (names.length > 0) {
+      this.names = names.filter(name => !this.isNameExcluded(name))
+    } else {
+      this.clearNames()
+    }
   }
 
   excludeNames(names) {
     names.forEach(name => this.excludedNames.add(name))
+  }
+
+  /** Did not find names for this location so exclude any previous names */
+  clearNames() {
+    this.excludeNames(this.names)
+    this.names = []
   }
 
   maybeUpdateNames(updateX, updateY, names) {

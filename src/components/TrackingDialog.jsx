@@ -44,7 +44,7 @@ export const TrackingDialog = ({open, onClose}) => {
   }
 
   const onSubmit = data => {
-    const parsedNames = data.revealed.split(',').map(str => str.trim());
+    const parsedNames = data.revealed.split(',').map(str => str.trim()).filter(str => str.length > 0);
     const trackingResult = new TrackingResult(grid.currentX, grid.currentY, parsedNames)
     dispatch(addResult(grid.tiles, trackingResult))
     handleClose()
