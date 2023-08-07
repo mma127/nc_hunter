@@ -1,10 +1,10 @@
 import {Box, Card, CardActionArea, Tooltip, Typography} from "@mui/material"
-import {makeStyles} from "@mui/styles"
 import {useGrid} from "../GridContext";
 import {v4 as uuid} from 'uuid';
 import _ from "lodash";
+import useClasses from "../hooks/useClasses";
 
-const useStyles = makeStyles((theme) => ({
+const styles = (theme) => ({
   wrapper: {
     minHeight: '7rem',
     minWidth: '7rem',
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'flex-end'
   }
-}))
+})
 
 const getLocationName = (planeData) => {
   if (planeData) {
@@ -61,7 +61,7 @@ const getLocationName = (planeData) => {
 }
 
 const TooltipContent = ({x, y, revealedNames, planeData}) => {
-  const classes = useStyles();
+  const classes = useClasses(styles);
   const name = getLocationName(planeData)
   return (
     <>
@@ -75,7 +75,7 @@ const TooltipContent = ({x, y, revealedNames, planeData}) => {
 }
 
 const Names = ({names}) => {
-  const classes = useStyles();
+  const classes = useClasses(styles);
   const nameContent = names.map(name => <Typography noWrap key={uuid()}>{name}</Typography>)
   return (
     <Box className={classes.trackedName}>
@@ -86,7 +86,7 @@ const Names = ({names}) => {
 
 export const Tile = ({x, y, handleClick}) => {
   console.log("Render Tile")
-  const classes = useStyles();
+  const classes = useClasses(styles);
   const grid = useGrid();
   const tile = grid.tiles.get(y)?.get(x)
 

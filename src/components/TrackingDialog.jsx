@@ -5,9 +5,9 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import {TrackingResult} from "../models/TrackingResult";
 import {addResult} from "../state/gridActions";
 import {useGrid, useGridDispatch} from "../GridContext";
-import {makeStyles} from "@mui/styles";
+import useClasses from "../hooks/useClasses";
 
-const useStyles = makeStyles(() => ({
+const styles = () => ({
   formWrapper: {
     paddingLeft: '1rem',
     paddingRight: '1rem',
@@ -21,14 +21,14 @@ const useStyles = makeStyles(() => ({
   namesInput: {
     width: "24rem"
   }
-}))
+})
 
 const schema = yup.object().shape({
   revealed: yup.string()
 })
 
 export const TrackingDialog = ({open, onClose}) => {
-  const classes = useStyles();
+  const classes = useClasses(styles);
   const grid = useGrid()
   const dispatch = useGridDispatch()
 

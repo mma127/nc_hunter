@@ -4,12 +4,12 @@ import * as yup from "yup"
 import {yupResolver} from "@hookform/resolvers/yup";
 
 import {useGridDispatch} from "../GridContext"
-import {makeStyles} from "@mui/styles";
 import {TrackingResult} from "../models/TrackingResult";
 import {addInitialResult, selectPlane} from "../state/gridActions";
 import {ELYSIUM, ELYSIUM_MAX_X, ELYSIUM_MAX_Y, GENERIC} from "../state/locationData";
+import useClasses from "../hooks/useClasses";
 
-const useStyles = makeStyles((theme) => ({
+const styles = (theme) => ({
   container: {
     height: '100vh',
     display: 'flex',
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   namesInput: {
     width: "26rem"
   }
-}))
+})
 
 const schema = yup.object().shape({
   x: yup.number().typeError("Must be a number").required("Required").positive().integer().max(100),
@@ -35,7 +35,7 @@ const schema = yup.object().shape({
 })
 
 export const StartForm = () => {
-  const classes = useStyles();
+  const classes = useClasses(styles);
   const dispatch = useGridDispatch()
 
   const {setError, handleSubmit, control, formState: {errors}} = useForm({

@@ -4,16 +4,15 @@ import {Tile} from "./Tile";
 
 import {useGrid, useGridDispatch} from "../GridContext"
 import _ from "lodash";
-import {makeStyles} from "@mui/styles";
 import {TrackingDialog} from "./TrackingDialog";
 import {resetGrid, setNewTrackingCoordinates} from "../state/gridActions";
-import {getMaxX, getMaxY} from "../state/locationData";
+import useClasses from "../hooks/useClasses";
 
 export const MAX_LENGTH = 9;
 export const SIDE_LENGTH = Math.floor(MAX_LENGTH / 2);
 export const FOV_LENGTH = 2;
 
-const useStyles = makeStyles(() => ({
+const styles = () => ({
   header: {
     display: 'flex',
     justifyContent: "space-around",
@@ -35,7 +34,7 @@ const useStyles = makeStyles(() => ({
     boxShadow: 24,
     p: 4,
   }
-}))
+})
 
 const createTile = ({x, y, handleOpen}) => {
   return <Tile x={x} y={y} handleClick={handleOpen} key={`tile-${x}-${y}`}/>
@@ -46,7 +45,7 @@ const createTile = ({x, y, handleOpen}) => {
  */
 export const TileGrid = () => {
   console.log("Render TILEGRID")
-  const classes = useStyles();
+  const classes = useClasses(styles);
   const grid = useGrid();
   const dispatch = useGridDispatch()
 
