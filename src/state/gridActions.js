@@ -2,6 +2,13 @@ import _ from "lodash";
 import {MAX_LENGTH, SIDE_LENGTH} from "../components/TileGrid";
 import {Location} from "../models/Location";
 
+export function selectPlane(plane) {
+  return {
+    type: "select_plane",
+    data: plane
+  }
+}
+
 /**
  * Given user's initial tracking result, create tiles map and return payload for action
  */

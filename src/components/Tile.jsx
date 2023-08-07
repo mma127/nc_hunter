@@ -7,6 +7,8 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     minHeight: '7rem',
     minWidth: '7rem',
+    height: '7rem',
+    width: '7rem',
     margin: '0.25rem',
     '&.starting': {
       borderSize: '0.5px',
@@ -21,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardActionArea: {
     height: '100%',
+    width: "100%",
     display: 'flex !important',
     flexDirection: 'column !important',
     alignItems: 'flex-start !important',
@@ -30,12 +33,15 @@ const useStyles = makeStyles((theme) => ({
   trackedName: {
     color: theme.palette.warning.main,
     textAlign: "right",
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    width: "100%"
   }
 }))
 const Names = ({names}) => {
   const classes = useStyles();
-  const nameContent = names.map(name => <Typography key={uuid()}>{name}</Typography>)
+  const nameContent = names.map(name => <Typography noWrap key={uuid()}>{name}</Typography>)
   return (
     <Box className={classes.trackedName}>
       {nameContent}

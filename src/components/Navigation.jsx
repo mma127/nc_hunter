@@ -6,7 +6,7 @@ export const Navigation = () => {
   const grid = useGrid();
 
   let content
-  if (grid.initialResult) {
+  if (grid.initialResult && grid.plane) {
     content = <TileGrid />
   } else {
     content = <StartForm />

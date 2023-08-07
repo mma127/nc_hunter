@@ -1,6 +1,7 @@
 import {useReducer} from "react";
 
 export const INITIAL_STATE = {
+  plane: null,
   currentX: null,
   currentY: null,
   initialResult: null,
@@ -10,6 +11,12 @@ export const INITIAL_STATE = {
 
 export function gridReducer(grid, action) {
   switch (action.type) {
+    case 'select_plane': {
+      return {
+        ...grid,
+        plane: action.data
+      }
+    }
     case 'add_initial_result': {
       return {
         ...grid,

@@ -1,0 +1,2802 @@
+[
+  {
+    "x": 1,
+    "y": 1,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 1,
+    "y": 2,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 1,
+    "y": 3,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 1,
+    "y": 4,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 1,
+    "y": 5,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 1,
+    "y": 6,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 1,
+    "y": 7,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 1,
+    "y": 8,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 1,
+    "y": 9,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 1,
+    "y": 10,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 1,
+    "y": 11,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 1,
+    "y": 12,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 1,
+    "y": 13,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 1,
+    "y": 14,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 1,
+    "y": 15,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 1,
+    "y": 16,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 1,
+    "y": 17,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 1,
+    "y": 18,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 1,
+    "y": 19,
+    "tilename": "Lush Orchard",
+    "tile_base": "Lush Orchard",
+    "color": "55FF33"
+  },
+  {
+    "x": 1,
+    "y": 20,
+    "tilename": "Lush Orchard",
+    "tile_base": "Lush Orchard",
+    "color": "55FF33"
+  },
+  {
+    "x": 2,
+    "y": 1,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 2,
+    "y": 2,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 2,
+    "y": 3,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 2,
+    "y": 4,
+    "tilename": "Encyclical of Mercy",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 2,
+    "y": 5,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 2,
+    "y": 6,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 2,
+    "y": 7,
+    "tilename": "Agri Dagi",
+    "tile_base": "Mountain Summit",
+    "color": "f4f6f6"
+  },
+  {
+    "x": 2,
+    "y": 8,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 2,
+    "y": 9,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 2,
+    "y": 10,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 2,
+    "y": 11,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 2,
+    "y": 12,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 2,
+    "y": 13,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 2,
+    "y": 14,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 2,
+    "y": 15,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 2,
+    "y": 16,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 2,
+    "y": 17,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 2,
+    "y": 18,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 2,
+    "y": 19,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 2,
+    "y": 20,
+    "tilename": "Lush Orchard",
+    "tile_base": "Lush Orchard",
+    "color": "55FF33"
+  },
+  {
+    "x": 3,
+    "y": 1,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 3,
+    "y": 2,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 3,
+    "y": 3,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 3,
+    "y": 4,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 3,
+    "y": 5,
+    "tilename": "Argentium Remnants",
+    "tile_base": "Argentium Remnants",
+    "color": "8AA37B"
+  },
+  {
+    "x": 3,
+    "y": 6,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 3,
+    "y": 7,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 3,
+    "y": 8,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 3,
+    "y": 9,
+    "tilename": "The Silent Wheel",
+    "tile_base": "Mill",
+    "color": "CC9966"
+  },
+  {
+    "x": 3,
+    "y": 10,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 3,
+    "y": 11,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 3,
+    "y": 12,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 3,
+    "y": 13,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 3,
+    "y": 14,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 3,
+    "y": 15,
+    "tilename": "Forest Primeval",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 3,
+    "y": 17,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 3,
+    "y": 16,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 3,
+    "y": 18,
+    "tilename": "Cottage",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 3,
+    "y": 19,
+    "tilename": "Palace of Harmony",
+    "tile_base": "Crystal Castle",
+    "color": "CC66FF"
+  },
+  {
+    "x": 3,
+    "y": 20,
+    "tilename": "Palace of Harmony",
+    "tile_base": "Crystal Castle",
+    "color": "CC66FF"
+  },
+  {
+    "x": 4,
+    "y": 1,
+    "tilename": "Garden of the Word",
+    "tile_base": "Hallowed Ground",
+    "color": "99ff99"
+  },
+  {
+    "x": 4,
+    "y": 2,
+    "tilename": "Garden of the Word",
+    "tile_base": "Hallowed Ground",
+    "color": "99ff99"
+  },
+  {
+    "x": 4,
+    "y": 3,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 4,
+    "y": 4,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 4,
+    "y": 5,
+    "tilename": "Shimmering Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 4,
+    "y": 6,
+    "tilename": "Shimmering Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 4,
+    "y": 7,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 4,
+    "y": 8,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 4,
+    "y": 9,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 4,
+    "y": 10,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 4,
+    "y": 11,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 4,
+    "y": 12,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 4,
+    "y": 13,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 4,
+    "y": 14,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 4,
+    "y": 15,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 4,
+    "y": 16,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 4,
+    "y": 17,
+    "tilename": "Cottage",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 4,
+    "y": 18,
+    "tilename": "House of Knowledge",
+    "tile_base": "Vault of Enlightenment",
+    "color": "00EEEE"
+  },
+  {
+    "x": 4,
+    "y": 19,
+    "tilename": "Palace of Harmony",
+    "tile_base": "Crystal Castle",
+    "color": "CC66FF"
+  },
+  {
+    "x": 4,
+    "y": 20,
+    "tilename": "Palace of Harmony",
+    "tile_base": "Crystal Castle",
+    "color": "CC66FF"
+  },
+  {
+    "x": 5,
+    "y": 1,
+    "tilename": "Garden of the Word",
+    "tile_base": "Hallowed Ground",
+    "color": "99ff99"
+  },
+  {
+    "x": 5,
+    "y": 2,
+    "tilename": "Garden of the Word",
+    "tile_base": "Hallowed Ground",
+    "color": "99ff99"
+  },
+  {
+    "x": 5,
+    "y": 3,
+    "tilename": "The Silent Reliquary",
+    "tile_base": "Sacred Columbarium",
+    "color": "dddddd"
+  },
+  {
+    "x": 5,
+    "y": 4,
+    "tilename": "The Silent Keep",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 5,
+    "y": 5,
+    "tilename": "Via Caelum",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 5,
+    "y": 6,
+    "tilename": "Shimmering Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 5,
+    "y": 7,
+    "tilename": "Shimmering Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 5,
+    "y": 8,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 5,
+    "y": 9,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 5,
+    "y": 10,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 5,
+    "y": 11,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 5,
+    "y": 12,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 5,
+    "y": 13,
+    "tilename": "Lush Orchard",
+    "tile_base": "Lush Orchard",
+    "color": "55FF33"
+  },
+  {
+    "x": 5,
+    "y": 14,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 5,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 5,
+    "y": 16,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 5,
+    "y": 17,
+    "tilename": "Guardian's Repository",
+    "tile_base": "Radiant Armory",
+    "color": "fff700"
+  },
+  {
+    "x": 5,
+    "y": 18,
+    "tilename": "House of Knowledge",
+    "tile_base": "Vault of Enlightenment",
+    "color": "00EEEE"
+  },
+  {
+    "x": 5,
+    "y": 19,
+    "tilename": "Ashavan Forge",
+    "tile_base": "Smithy",
+    "color": "33CCFF"
+  },
+  {
+    "x": 5,
+    "y": 20,
+    "tilename": "Automaton Factory",
+    "tile_base": "Clockwork Tower",
+    "color": "CC9900"
+  },
+  {
+    "x": 6,
+    "y": 1,
+    "tilename": "Garden of the Word",
+    "tile_base": "Hallowed Ground",
+    "color": "99ff99"
+  },
+  {
+    "x": 6,
+    "y": 2,
+    "tilename": "Garden of the Word",
+    "tile_base": "Hallowed Ground",
+    "color": "99ff99"
+  },
+  {
+    "x": 6,
+    "y": 3,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 6,
+    "y": 4,
+    "tilename": "Shimmering Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 6,
+    "y": 5,
+    "tilename": "Shimmering Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 6,
+    "y": 6,
+    "tilename": "Via Caelum",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 6,
+    "y": 7,
+    "tilename": "The Tower of Truth",
+    "tile_base": "Ivory Tower",
+    "color": "EEEEEE"
+  },
+  {
+    "x": 6,
+    "y": 8,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 6,
+    "y": 9,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 6,
+    "y": 10,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 6,
+    "y": 11,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 6,
+    "y": 12,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 6,
+    "y": 13,
+    "tilename": "Lush Orchard",
+    "tile_base": "Lush Orchard",
+    "color": "55FF33"
+  },
+  {
+    "x": 6,
+    "y": 14,
+    "tilename": "Lush Orchard",
+    "tile_base": "Lush Orchard",
+    "color": "55FF33"
+  },
+  {
+    "x": 6,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 6,
+    "y": 16,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 6,
+    "y": 17,
+    "tilename": "Straight and Narrow Way",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 6,
+    "y": 18,
+    "tilename": "Straight and Narrow Way",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 6,
+    "y": 19,
+    "tilename": "The Dancing Willow",
+    "tile_base": "Inn",
+    "color": "6666FF"
+  },
+  {
+    "x": 6,
+    "y": 20,
+    "tilename": "Arc of the Helping Hand",
+    "tile_base": "Ward of Respite",
+    "color": "EB5E66"
+  },
+  {
+    "x": 7,
+    "y": 1,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 7,
+    "y": 2,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 7,
+    "y": 3,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 7,
+    "y": 4,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 7,
+    "y": 5,
+    "tilename": "Shimmering Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 7,
+    "y": 6,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 7,
+    "y": 7,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 7,
+    "y": 8,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 7,
+    "y": 9,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 7,
+    "y": 10,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 7,
+    "y": 11,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 7,
+    "y": 12,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 7,
+    "y": 13,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 7,
+    "y": 14,
+    "tilename": "Lush Orchard",
+    "tile_base": "Lush Orchard",
+    "color": "55FF33"
+  },
+  {
+    "x": 7,
+    "y": 15,
+    "tilename": "Ashavan Bridge",
+    "tile_base": "Wooden Bridge",
+    "color": "BB8800"
+  },
+  {
+    "x": 7,
+    "y": 16,
+    "tilename": "Straight and Narrow Way",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 7,
+    "y": 17,
+    "tilename": "The Last Homely House",
+    "tile_base": "Tea House",
+    "color": "996633"
+  },
+  {
+    "x": 7,
+    "y": 18,
+    "tilename": "Cottage",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 7,
+    "y": 19,
+    "tilename": "Cottage",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 7,
+    "y": 20,
+    "tilename": "Cottage",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 8,
+    "y": 1,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 8,
+    "y": 2,
+    "tilename": "Exalted Peak",
+    "tile_base": "Mountain Summit",
+    "color": "f4f6f6"
+  },
+  {
+    "x": 8,
+    "y": 3,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 8,
+    "y": 4,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 8,
+    "y": 5,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 8,
+    "y": 6,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 8,
+    "y": 7,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 8,
+    "y": 8,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 8,
+    "y": 9,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 8,
+    "y": 10,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 8,
+    "y": 11,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 8,
+    "y": 12,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 8,
+    "y": 13,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 8,
+    "y": 14,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 8,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 8,
+    "y": 16,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 8,
+    "y": 17,
+    "tilename": "Lost Arts",
+    "tile_base": "Amphitheater",
+    "color": "0099CC"
+  },
+  {
+    "x": 8,
+    "y": 18,
+    "tilename": "The Gourmet Bard",
+    "tile_base": "Tavern",
+    "color": "CC9922"
+  },
+  {
+    "x": 8,
+    "y": 19,
+    "tilename": "Cottage",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 8,
+    "y": 20,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 9,
+    "y": 1,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 9,
+    "y": 2,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 9,
+    "y": 3,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 9,
+    "y": 4,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 9,
+    "y": 5,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 9,
+    "y": 6,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 9,
+    "y": 7,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 9,
+    "y": 8,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 9,
+    "y": 9,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 9,
+    "y": 10,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 9,
+    "y": 11,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 9,
+    "y": 12,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 9,
+    "y": 13,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 9,
+    "y": 14,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 9,
+    "y": 15,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 9,
+    "y": 16,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 9,
+    "y": 17,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 9,
+    "y": 18,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 9,
+    "y": 19,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 9,
+    "y": 20,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 10,
+    "y": 1,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 10,
+    "y": 2,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 10,
+    "y": 3,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 10,
+    "y": 4,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 10,
+    "y": 5,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 10,
+    "y": 6,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 10,
+    "y": 7,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 10,
+    "y": 8,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 10,
+    "y": 9,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 10,
+    "y": 10,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 10,
+    "y": 11,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 10,
+    "y": 12,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 10,
+    "y": 13,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 10,
+    "y": 14,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 10,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 10,
+    "y": 16,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 10,
+    "y": 17,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 10,
+    "y": 18,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 10,
+    "y": 19,
+    "tilename": "Birch Citadel",
+    "tile_base": "Fletcher Camp",
+    "color": "b0b800"
+  },
+  {
+    "x": 10,
+    "y": 20,
+    "tilename": "Idyllic Meadow",
+    "tile_base": "Idyllic Meadow",
+    "color": "22DD22"
+  },
+  {
+    "x": 11,
+    "y": 1,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 11,
+    "y": 2,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 11,
+    "y": 3,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 11,
+    "y": 4,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 11,
+    "y": 5,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 11,
+    "y": 6,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 11,
+    "y": 7,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 11,
+    "y": 8,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 11,
+    "y": 9,
+    "tilename": "The Tower of Faith",
+    "tile_base": "Ivory Tower",
+    "color": "EEEEEE"
+  },
+  {
+    "x": 11,
+    "y": 10,
+    "tilename": "Via Caelum",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 11,
+    "y": 11,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 11,
+    "y": 12,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 11,
+    "y": 13,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 11,
+    "y": 14,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 11,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 11,
+    "y": 16,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 11,
+    "y": 17,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 11,
+    "y": 18,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 11,
+    "y": 19,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 11,
+    "y": 20,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 12,
+    "y": 1,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 12,
+    "y": 2,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 12,
+    "y": 3,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 12,
+    "y": 4,
+    "tilename": "Via Caelum",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 12,
+    "y": 5,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 12,
+    "y": 6,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 12,
+    "y": 7,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 12,
+    "y": 8,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 12,
+    "y": 9,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 12,
+    "y": 10,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 12,
+    "y": 11,
+    "tilename": "Via Caelum",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 12,
+    "y": 12,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 12,
+    "y": 13,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 12,
+    "y": 14,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 12,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 12,
+    "y": 16,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 12,
+    "y": 17,
+    "tilename": "Apex of the Mountain",
+    "tile_base": "Mountain Summit",
+    "color": "f4f6f6"
+  },
+  {
+    "x": 12,
+    "y": 18,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 12,
+    "y": 19,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 12,
+    "y": 20,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 13,
+    "y": 1,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 13,
+    "y": 2,
+    "tilename": "Mill",
+    "tile_base": "Mill",
+    "color": "CC9966"
+  },
+  {
+    "x": 13,
+    "y": 3,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 13,
+    "y": 4,
+    "tilename": "Zion Bridge",
+    "tile_base": "Wooden Bridge",
+    "color": "BB8800"
+  },
+  {
+    "x": 13,
+    "y": 5,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 13,
+    "y": 6,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 13,
+    "y": 7,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 13,
+    "y": 8,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 13,
+    "y": 9,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 13,
+    "y": 10,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 13,
+    "y": 11,
+    "tilename": "Via Caelum",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 13,
+    "y": 12,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 13,
+    "y": 13,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 13,
+    "y": 14,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 13,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 13,
+    "y": 16,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 13,
+    "y": 17,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 13,
+    "y": 18,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 13,
+    "y": 19,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 13,
+    "y": 20,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 14,
+    "y": 1,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 14,
+    "y": 2,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 14,
+    "y": 3,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 14,
+    "y": 4,
+    "tilename": "Justice Causeway",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 14,
+    "y": 5,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 14,
+    "y": 6,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 14,
+    "y": 7,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 14,
+    "y": 8,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 14,
+    "y": 9,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 14,
+    "y": 10,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 14,
+    "y": 11,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 14,
+    "y": 12,
+    "tilename": "Via Caelum",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 14,
+    "y": 13,
+    "tilename": "Via Caelum",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 14,
+    "y": 14,
+    "tilename": "Eunoe River Bank",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 14,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 14,
+    "y": 16,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 14,
+    "y": 17,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 14,
+    "y": 18,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 14,
+    "y": 19,
+    "tilename": "Idyllic Treehouse",
+    "tile_base": "Idyllic Treehouse",
+    "color": "FFE8C7"
+  },
+  {
+    "x": 14,
+    "y": 20,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 1,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 2,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 3,
+    "tilename": "House of Succor",
+    "tile_base": "Tea House",
+    "color": "996633"
+  },
+  {
+    "x": 15,
+    "y": 4,
+    "tilename": "Justice Promenade",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 15,
+    "y": 5,
+    "tilename": "House of Prudence",
+    "tile_base": "Clockwork Tower",
+    "color": "CC9900"
+  },
+  {
+    "x": 15,
+    "y": 6,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 15,
+    "y": 7,
+    "tilename": "River Warden",
+    "tile_base": "Fletcher Camp",
+    "color": "b0b800"
+  },
+  {
+    "x": 15,
+    "y": 8,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 9,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 10,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 11,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 12,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 13,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 14,
+    "tilename": "Via Caelum",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 15,
+    "y": 15,
+    "tilename": "Arcadia Bridge",
+    "tile_base": "Wooden Bridge",
+    "color": "BB8800"
+  },
+  {
+    "x": 15,
+    "y": 16,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 17,
+    "tilename": "Idyllic Treehouse",
+    "tile_base": "Idyllic Treehouse",
+    "color": "FFE8C7"
+  },
+  {
+    "x": 15,
+    "y": 18,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 19,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 15,
+    "y": 20,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 16,
+    "y": 1,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 16,
+    "y": 2,
+    "tilename": "House of Courage",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 16,
+    "y": 3,
+    "tilename": "The Wicket Gate",
+    "tile_base": "Inn",
+    "color": "6666FF"
+  },
+  {
+    "x": 16,
+    "y": 4,
+    "tilename": "Justice Promenade",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 16,
+    "y": 5,
+    "tilename": "Arc of the Guiding Light",
+    "tile_base": "Ward of Respite",
+    "color": "EB5E66"
+  },
+  {
+    "x": 16,
+    "y": 6,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 16,
+    "y": 7,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 16,
+    "y": 8,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 16,
+    "y": 9,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 16,
+    "y": 10,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 16,
+    "y": 11,
+    "tilename": "Idyllic Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 16,
+    "y": 12,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 16,
+    "y": 13,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 16,
+    "y": 14,
+    "tilename": "Mill",
+    "tile_base": "Mill",
+    "color": "CC9966"
+  },
+  {
+    "x": 16,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 16,
+    "y": 16,
+    "tilename": "The Road Less Traveled",
+    "tile_base": "Sylvan Path",
+    "color": "64ca97"
+  },
+  {
+    "x": 16,
+    "y": 17,
+    "tilename": "Cottage of Lost Play",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 16,
+    "y": 18,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 16,
+    "y": 19,
+    "tilename": "Idyllic Treehouse",
+    "tile_base": "Idyllic Treehouse",
+    "color": "FFE8C7"
+  },
+  {
+    "x": 16,
+    "y": 20,
+    "tilename": "Vibrant Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 17,
+    "y": 1,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 17,
+    "y": 2,
+    "tilename": "House of Trust",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 17,
+    "y": 3,
+    "tilename": "House of Discretion",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 17,
+    "y": 4,
+    "tilename": "Justice Promenade",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 17,
+    "y": 5,
+    "tilename": "The Shield and Sword",
+    "tile_base": "Tavern",
+    "color": "CC9922"
+  },
+  {
+    "x": 17,
+    "y": 6,
+    "tilename": "Veritas Beach",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 17,
+    "y": 7,
+    "tilename": "Veritas Beach",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 17,
+    "y": 8,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 17,
+    "y": 9,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 17,
+    "y": 10,
+    "tilename": "Idyllic Treehouse",
+    "tile_base": "Idyllic Treehouse",
+    "color": "FFE8C7"
+  },
+  {
+    "x": 17,
+    "y": 11,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 17,
+    "y": 12,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 17,
+    "y": 13,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 17,
+    "y": 14,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 17,
+    "y": 15,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 17,
+    "y": 16,
+    "tilename": "Wanderer's Refuge",
+    "tile_base": "Inn",
+    "color": "6666FF"
+  },
+  {
+    "x": 17,
+    "y": 17,
+    "tilename": "The Road Less Traveled",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 17,
+    "y": 18,
+    "tilename": "Cradle of Life",
+    "tile_base": "Lambent Conservatory",
+    "color": "afdab9"
+  },
+  {
+    "x": 17,
+    "y": 19,
+    "tilename": "House of Bliss",
+    "tile_base": "Tea House",
+    "color": "996633"
+  },
+  {
+    "x": 17,
+    "y": 20,
+    "tilename": "Cottage",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 18,
+    "y": 1,
+    "tilename": "Glowing Forest",
+    "tile_base": "Idyllic Forest",
+    "color": "228855"
+  },
+  {
+    "x": 18,
+    "y": 2,
+    "tilename": "Panopticon",
+    "tile_base": "Panopticon",
+    "color": "FFEEBB"
+  },
+  {
+    "x": 18,
+    "y": 3,
+    "tilename": "Hall of Law",
+    "tile_base": "Vault of Enlightenment",
+    "color": "00EEEE"
+  },
+  {
+    "x": 18,
+    "y": 4,
+    "tilename": "Justice Plaza",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 18,
+    "y": 5,
+    "tilename": "Enforcer's Repository",
+    "tile_base": "Radiant Armory",
+    "color": "fff700"
+  },
+  {
+    "x": 18,
+    "y": 6,
+    "tilename": "House of Respect",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 18,
+    "y": 7,
+    "tilename": "Veritas Beach",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 18,
+    "y": 8,
+    "tilename": "Veritas Beach",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 18,
+    "y": 9,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 18,
+    "y": 10,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 18,
+    "y": 11,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 18,
+    "y": 12,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 18,
+    "y": 13,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 18,
+    "y": 14,
+    "tilename": "The River Eunoe",
+    "tile_base": "River",
+    "color": "3333FF"
+  },
+  {
+    "x": 18,
+    "y": 15,
+    "tilename": "Idyllic Treehouse",
+    "tile_base": "Idyllic Treehouse",
+    "color": "FFE8C7"
+  },
+  {
+    "x": 18,
+    "y": 16,
+    "tilename": "Arc of the Loving Heart",
+    "tile_base": "Ward of Respite",
+    "color": "EB5E66"
+  },
+  {
+    "x": 18,
+    "y": 17,
+    "tilename": "The Road Less Traveled",
+    "tile_base": "Cobblestone Road",
+    "color": "adafaf"
+  },
+  {
+    "x": 18,
+    "y": 18,
+    "tilename": "Hall of Guidance",
+    "tile_base": "Vault of Enlightenment",
+    "color": "00EEEE"
+  },
+  {
+    "x": 18,
+    "y": 19,
+    "tilename": "Hall of Guidance",
+    "tile_base": "Vault of Enlightenment",
+    "color": "00EEEE"
+  },
+  {
+    "x": 18,
+    "y": 20,
+    "tilename": "Garden of Memories",
+    "tile_base": "Stone Garden",
+    "color": "BBBB77"
+  },
+  {
+    "x": 19,
+    "y": 1,
+    "tilename": "Zion Grand Court",
+    "tile_base": "Golden Palace",
+    "color": "FFFF00"
+  },
+  {
+    "x": 19,
+    "y": 2,
+    "tilename": "Zion Grand Court",
+    "tile_base": "Golden Palace",
+    "color": "FFFF00"
+  },
+  {
+    "x": 19,
+    "y": 3,
+    "tilename": "Hall of Law",
+    "tile_base": "Vault of Enlightenment",
+    "color": "00EEEE"
+  },
+  {
+    "x": 19,
+    "y": 4,
+    "tilename": "House of Goodwill",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 19,
+    "y": 5,
+    "tilename": "Zion Forge",
+    "tile_base": "Smithy",
+    "color": "33CCFF"
+  },
+  {
+    "x": 19,
+    "y": 6,
+    "tilename": "House of Honesty",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 19,
+    "y": 7,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 19,
+    "y": 8,
+    "tilename": "Veritas Beach",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 19,
+    "y": 9,
+    "tilename": "Veritas Beach",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 19,
+    "y": 10,
+    "tilename": "Veritas Beach",
+    "tile_base": "Idyllic Beach",
+    "color": "FF9933"
+  },
+  {
+    "x": 19,
+    "y": 11,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 19,
+    "y": 12,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 19,
+    "y": 13,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 19,
+    "y": 14,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 19,
+    "y": 15,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 19,
+    "y": 16,
+    "tilename": "Eternal Shelter",
+    "tile_base": "Euphoria Asylum",
+    "color": "FF99CC"
+  },
+  {
+    "x": 19,
+    "y": 17,
+    "tilename": "Eternal Shelter",
+    "tile_base": "Euphoria Asylum",
+    "color": "FF99CC"
+  },
+  {
+    "x": 19,
+    "y": 18,
+    "tilename": "Soul Cradle",
+    "tile_base": "Soul Orchard",
+    "color": "CC00FF"
+  },
+  {
+    "x": 19,
+    "y": 19,
+    "tilename": "Soul Cradle",
+    "tile_base": "Soul Orchard",
+    "color": "CC00FF"
+  },
+  {
+    "x": 19,
+    "y": 20,
+    "tilename": "Eternal Library",
+    "tile_base": "Hall of Memories",
+    "color": "ADA96E"
+  },
+  {
+    "x": 20,
+    "y": 1,
+    "tilename": "Zion Grand Court",
+    "tile_base": "Golden Palace",
+    "color": "FFFF00"
+  },
+  {
+    "x": 20,
+    "y": 2,
+    "tilename": "Zion Grand Court",
+    "tile_base": "Golden Palace",
+    "color": "FFFF00"
+  },
+  {
+    "x": 20,
+    "y": 3,
+    "tilename": "House of Redemption",
+    "tile_base": "Cottage",
+    "color": "FFCC00"
+  },
+  {
+    "x": 20,
+    "y": 4,
+    "tilename": "Beulah Land",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 20,
+    "y": 5,
+    "tilename": "Beulah Land",
+    "tile_base": "Lush Orchard",
+    "color": "55FF33"
+  },
+  {
+    "x": 20,
+    "y": 6,
+    "tilename": "Beulah Land",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 20,
+    "y": 7,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 20,
+    "y": 8,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 20,
+    "y": 9,
+    "tilename": "Lush Field",
+    "tile_base": "Lush Field",
+    "color": "66FF00"
+  },
+  {
+    "x": 20,
+    "y": 10,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 20,
+    "y": 11,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 20,
+    "y": 12,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 20,
+    "y": 13,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 20,
+    "y": 14,
+    "tilename": "Caretaker's Watch",
+    "tile_base": "Mountaintop Citadel",
+    "color": "c58917"
+  },
+  {
+    "x": 20,
+    "y": 15,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 20,
+    "y": 16,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 20,
+    "y": 17,
+    "tilename": "Mountain",
+    "tile_base": "Mountain",
+    "color": "213D30"
+  },
+  {
+    "x": 20,
+    "y": 18,
+    "tilename": "Soul Cradle",
+    "tile_base": "Soul Orchard",
+    "color": "CC00FF"
+  },
+  {
+    "x": 20,
+    "y": 19,
+    "tilename": "Soul Cradle",
+    "tile_base": "Soul Orchard",
+    "color": "CC00FF"
+  },
+  {
+    "x": 20,
+    "y": 20,
+    "tilename": "Eternal Library",
+    "tile_base": "Hall of Memories",
+    "color": "ADA96E"
+  }
+]

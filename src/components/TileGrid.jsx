@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Button, Container, Grid} from "@mui/material"
+import {Box, Button, Container, Grid, Typography} from "@mui/material"
 import {Tile} from "./Tile";
 
 import {useGrid, useGridDispatch} from "../GridContext"
@@ -8,11 +8,18 @@ import {makeStyles} from "@mui/styles";
 import {TrackingDialog} from "./TrackingDialog";
 import {resetGrid, setNewTrackingCoordinates} from "../state/gridActions";
 
+import elysium_data from '../data/elysium_tiles.json';
+
 export const MAX_LENGTH = 9;
 export const SIDE_LENGTH = Math.floor(MAX_LENGTH / 2);
 export const FOV_LENGTH = 2;
 
 const useStyles = makeStyles(() => ({
+  header: {
+    display: 'flex',
+    justifyContent: "space-around",
+    paddingTop: '0.5rem'
+  },
   rowWrapper: {
     display: 'flex',
     justifyContent: 'center',
@@ -40,9 +47,12 @@ const createTile = ({x, y, handleOpen}) => {
  */
 export const TileGrid = () => {
   console.log("Render TILEGRID")
+  console.log(elysium_data)
   const classes = useStyles();
   const grid = useGrid();
   const dispatch = useGridDispatch()
+
+  const plane = _.capitalize(grid.plane)
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = (x, y) => {
@@ -74,7 +84,8 @@ export const TileGrid = () => {
 
   return (
     <Container maxWidth="xlg">
-      <Box>
+      <Box className={classes.header}>
+        <Typography variant="h5">{plane}</Typography>
         <Button onClick={handleReset}>Reset</Button>
       </Box>
       <Grid container spacing={1} sx={{marginTop: '1rem'}}>
