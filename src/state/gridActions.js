@@ -1,6 +1,7 @@
 import _ from "lodash";
 import {MAX_LENGTH, SIDE_LENGTH} from "../components/TileGrid";
 import {Location} from "../models/Location";
+import {getMaxX, getMaxY} from "./locationData";
 
 export function selectPlane(plane) {
   return {
@@ -17,12 +18,13 @@ export function addInitialResult(initialResult, plane) {
 
   const names = initialResult.names
 
+  // Assume initial [x,y] are in bounds of the plane
   const centerX = initialResult.x
   const centerY = initialResult.y
   const topLeftX = centerX - SIDE_LENGTH
   const topLeftY = centerY - SIDE_LENGTH
-  const bottomRightX = topLeftX + MAX_LENGTH
-  const bottomRightY = topLeftY + MAX_LENGTH
+  const bottomRightX = Math.min(topLeftX + MAX_LENGTH, getMaxX(plane) + 1)
+  const bottomRightY = Math.min(topLeftY + MAX_LENGTH, getMaxY(plane) + 1)
   const yRange = _.range(topLeftY, bottomRightY)
   const xRange = _.range(topLeftX, bottomRightX)
 

@@ -2694,7 +2694,7 @@
       "y": 20,
       "tilename": "Eternal Library",
       "tile_base": "Hall of Memories",
-      "color": "ADA96E"
+      "color": "c75a17"
     }
   },
   "20": {
@@ -2836,7 +2836,7 @@
       "y": 20,
       "tilename": "Eternal Library",
       "tile_base": "Hall of Memories",
-      "color": "ADA96E"
+      "color": "c75a17"
     }
   }
 }

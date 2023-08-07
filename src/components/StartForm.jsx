@@ -7,6 +7,7 @@ import {useGridDispatch} from "../GridContext"
 import {makeStyles} from "@mui/styles";
 import {TrackingResult} from "../models/TrackingResult";
 import {addInitialResult, selectPlane} from "../state/gridActions";
+import {ELYSIUM, ELYSIUM_MAX_X, ELYSIUM_MAX_Y, GENERIC} from "../state/locationData";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -37,15 +38,33 @@ export const StartForm = () => {
   const classes = useStyles();
   const dispatch = useGridDispatch()
 
-  const {handleSubmit, control, formState: {errors}} = useForm({
+  const {setError, handleSubmit, control, formState: {errors}} = useForm({
     resolver: yupResolver(schema),
   })
 
+  const checkPlaneBounds = (x, y, plane) => {
+    let errors = []
+    if (plane === ELYSIUM) {
+      if (x > ELYSIUM_MAX_X) {
+        errors.push({type: "manual", name: "x", message: "Invalid Elysium coordinate"})
+      }
+      if (y > ELYSIUM_MAX_Y) {
+        errors.push({type: "manual", name: "y", message: "Invalid Elysium coordinate"})
+      }
+    }
+    return errors
+  }
+
   const onSubmit = data => {
-    const parsedNames = data.revealed.split(',').map(str => str.trim());
-    const trackingResult = new TrackingResult(data.x, data.y, parsedNames)
-    dispatch(selectPlane(data.plane))
-    dispatch(addInitialResult(trackingResult, data.plane))
+    const boundsErrors = checkPlaneBounds(data.x, data.y, data.plane)
+    if (boundsErrors.length > 0) {
+      boundsErrors.forEach(({name, type, message}) => setError(name, {type, message}))
+    } else {
+      const parsedNames = data.revealed.split(',').map(str => str.trim());
+      const trackingResult = new TrackingResult(data.x, data.y, parsedNames)
+      dispatch(selectPlane(data.plane))
+      dispatch(addInitialResult(trackingResult, data.plane))
+    }
   }
 
   return (
@@ -81,7 +100,7 @@ export const StartForm = () => {
             </Box>
             <Box className={classes.row} pt={1} pb={1}>
               <Controller
-                name="plane" control={control} defaultValue="generic"
+                name="plane" control={control} defaultValue={ELYSIUM}
                 render={({ field }) => (
                   <FormControl sx={{ minWidth: 150 }} size="small">
                     <InputLabel id="plane-select-label">Select Plane</InputLabel>
@@ -92,8 +111,8 @@ export const StartForm = () => {
                       color="secondary"
                       {...field}
                     >
-                      <MenuItem key="generic" value="generic">Generic</MenuItem>
-                      <MenuItem key="elysium" value="elysium">Elysium</MenuItem>
+                      <MenuItem key="generic" value={GENERIC}>Generic</MenuItem>
+                      <MenuItem key="elysium" value={ELYSIUM}>Elysium</MenuItem>
                     </Select>
                   </FormControl>)}
               />

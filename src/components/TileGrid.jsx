@@ -7,6 +7,7 @@ import _ from "lodash";
 import {makeStyles} from "@mui/styles";
 import {TrackingDialog} from "./TrackingDialog";
 import {resetGrid, setNewTrackingCoordinates} from "../state/gridActions";
+import {getMaxX, getMaxY} from "../state/locationData";
 
 export const MAX_LENGTH = 9;
 export const SIDE_LENGTH = Math.floor(MAX_LENGTH / 2);
@@ -49,7 +50,7 @@ export const TileGrid = () => {
   const grid = useGrid();
   const dispatch = useGridDispatch()
 
-  const plane = _.capitalize(grid.plane)
+  const plane = grid.plane
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = (x, y) => {
@@ -82,7 +83,7 @@ export const TileGrid = () => {
   return (
     <Container maxWidth="xlg">
       <Box className={classes.header}>
-        <Typography variant="h5">{plane}</Typography>
+        <Typography variant="h5">{_.capitalize(plane)}</Typography>
         <Button onClick={handleReset}>Reset</Button>
       </Box>
       <Grid container spacing={1} sx={{marginTop: '1rem'}}>

@@ -2,6 +2,7 @@ import {Box, Card, CardActionArea, Tooltip, Typography} from "@mui/material"
 import {makeStyles} from "@mui/styles"
 import {useGrid} from "../GridContext";
 import {v4 as uuid} from 'uuid';
+import _ from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -87,35 +88,44 @@ export const Tile = ({x, y, handleClick}) => {
   console.log("Render Tile")
   const classes = useStyles();
   const grid = useGrid();
-  const tile = grid.tiles.get(y).get(x)
-  const isStartingTile = grid.initialResult.x === x && grid.initialResult.y === y;
-  let isNonStartingTrackingTile
-  if (!isStartingTile) {
-    isNonStartingTrackingTile = grid.trackingResults.some(result => result.x === x && result.y === y)
+  const tile = grid.tiles.get(y)?.get(x)
+
+  const isBlank = _.isNil(tile)
+
+  if (!isBlank) {
+    const isStartingTile = grid.initialResult.x === x && grid.initialResult.y === y;
+    let isNonStartingTrackingTile
+    if (!isStartingTile) {
+      isNonStartingTrackingTile = grid.trackingResults.some(result => result.x === x && result.y === y)
+    } else {
+      isNonStartingTrackingTile = false
+    }
+
+    const revealedNames = tile.names;
+    const planeData = tile.planeData;
+
+    const onClick = () => {
+      handleClick(x, y)
+    }
+
+    return (
+      <Tooltip key={`tooltip-${x}-${y}`}
+               title={<TooltipContent x={x} y={y} revealedNames={revealedNames} planeData={planeData}/>} arrow followCursor>
+        <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}
+              sx={{ backgroundColor: planeData ? `#${planeData.color}` : 'inherit' }}
+        >
+          <CardActionArea className={classes.cardActionArea} onClick={onClick}>
+            <Box>
+              <Typography>[{x},{y}]</Typography>
+            </Box>
+            {revealedNames ? <Names names={revealedNames}/> : null}
+          </CardActionArea>
+        </Card>
+      </Tooltip>
+    )
   } else {
-    isNonStartingTrackingTile = false
+    return (
+      <Card className={classes.wrapper}></Card>
+    )
   }
-
-  const revealedNames = tile.names;
-  const planeData = tile.planeData;
-
-  const onClick = () => {
-    handleClick(x, y)
-  }
-
-  return (
-    <Tooltip key={`tooltip-${x}-${y}`}
-             title={<TooltipContent x={x} y={y} revealedNames={revealedNames} planeData={planeData}/>} arrow followCursor>
-      <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}
-            sx={{ backgroundColor: planeData ? `#${planeData.color}` : 'inherit' }}
-      >
-        <CardActionArea className={classes.cardActionArea} onClick={onClick}>
-          <Box>
-            <Typography>[{x},{y}]</Typography>
-          </Box>
-          {revealedNames ? <Names names={revealedNames}/> : null}
-        </CardActionArea>
-      </Card>
-    </Tooltip>
-  )
 }
