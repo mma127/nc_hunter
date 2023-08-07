@@ -8,8 +8,6 @@ import {makeStyles} from "@mui/styles";
 import {TrackingDialog} from "./TrackingDialog";
 import {resetGrid, setNewTrackingCoordinates} from "../state/gridActions";
 
-import elysium_data from '../data/elysium_tiles.json';
-
 export const MAX_LENGTH = 9;
 export const SIDE_LENGTH = Math.floor(MAX_LENGTH / 2);
 export const FOV_LENGTH = 2;
@@ -47,7 +45,6 @@ const createTile = ({x, y, handleOpen}) => {
  */
 export const TileGrid = () => {
   console.log("Render TILEGRID")
-  console.log(elysium_data)
   const classes = useStyles();
   const grid = useGrid();
   const dispatch = useGridDispatch()

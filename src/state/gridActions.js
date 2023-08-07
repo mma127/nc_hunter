@@ -12,7 +12,7 @@ export function selectPlane(plane) {
 /**
  * Given user's initial tracking result, create tiles map and return payload for action
  */
-export function addInitialResult(initialResult) {
+export function addInitialResult(initialResult, plane) {
   const tiles = new Map()
 
   const names = initialResult.names
@@ -30,7 +30,7 @@ export function addInitialResult(initialResult) {
   yRange.forEach(y => {
     const yMap = new Map()
     xRange.forEach(x => {
-      const location = new Location(x, y)
+      const location = new Location(x, y, plane)
       location.maybeUpdateNames(centerX, centerY, names)
       yMap.set(x, location)
     })

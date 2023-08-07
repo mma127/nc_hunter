@@ -48,13 +48,25 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const TooltipContent = ({x, y, revealedNames}) => {
+const getLocationName = (planeData) => {
+  if (planeData) {
+    if (planeData.tilename === planeData.tile_base) {
+      return planeData.tilename;
+    } else {
+      return `${planeData.tilename} (${planeData.tile_base})`
+    }
+  }
+  return null
+}
+
+const TooltipContent = ({x, y, revealedNames, planeData}) => {
   const classes = useStyles();
+  const name = getLocationName(planeData)
   return (
     <>
       <Typography variant="subtitle2"
                   className={classes.tooltipHeader}>
-        [{x},{y}]
+        [{x},{y}] {name}
       </Typography>
       {revealedNames.map(name => <Box key={`revealed-${name}`}><Typography variant="body" className={classes.description}>{name}</Typography></Box>)}
     </>
@@ -84,7 +96,8 @@ export const Tile = ({x, y, handleClick}) => {
     isNonStartingTrackingTile = false
   }
 
-  const revealedNames = tile.names
+  const revealedNames = tile.names;
+  const planeData = tile.planeData;
 
   const onClick = () => {
     handleClick(x, y)
@@ -92,8 +105,10 @@ export const Tile = ({x, y, handleClick}) => {
 
   return (
     <Tooltip key={`tooltip-${x}-${y}`}
-             title={<TooltipContent x={x} y={y} revealedNames={revealedNames} />} arrow followCursor>
-      <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}>
+             title={<TooltipContent x={x} y={y} revealedNames={revealedNames} planeData={planeData}/>} arrow followCursor>
+      <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}
+            sx={{ backgroundColor: planeData ? `#${planeData.color}` : 'inherit' }}
+      >
         <CardActionArea className={classes.cardActionArea} onClick={onClick}>
           <Box>
             <Typography>[{x},{y}]</Typography>

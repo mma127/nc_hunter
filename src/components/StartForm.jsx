@@ -45,7 +45,7 @@ export const StartForm = () => {
     const parsedNames = data.revealed.split(',').map(str => str.trim());
     const trackingResult = new TrackingResult(data.x, data.y, parsedNames)
     dispatch(selectPlane(data.plane))
-    dispatch(addInitialResult(trackingResult))
+    dispatch(addInitialResult(trackingResult, data.plane))
   }
 
   return (
