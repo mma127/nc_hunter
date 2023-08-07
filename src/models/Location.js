@@ -1,5 +1,5 @@
 import {FOV_LENGTH} from "../components/TileGrid";
-import {getElysiumTile} from "../state/locationData";
+import {getPlaneData} from "../state/locationData";
 
 export class Location {
   constructor(x, y, plane) {
@@ -8,21 +8,7 @@ export class Location {
     this.plane = plane;
     this.names = [];
     this.excludedNames = new Set();
-    this.planeData = this.getPlaneData(x, y, plane);
-  }
-
-  getPlaneData(x, y, plane) {
-    switch(plane) {
-      case 'elysium': {
-        return getElysiumTile(x, y)
-      }
-      case 'generic': {
-        return null
-      }
-      default: {
-        throw Error("Unknown plane")
-      }
-    }
+    this.planeData = getPlaneData(x, y, plane);
   }
 
   isNameExcluded(name) {

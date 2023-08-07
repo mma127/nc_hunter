@@ -6,7 +6,7 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import {useGridDispatch} from "../GridContext"
 import {TrackingResult} from "../models/TrackingResult";
 import {addInitialResult, selectPlane} from "../state/gridActions";
-import {ELYSIUM, ELYSIUM_MAX_X, ELYSIUM_MAX_Y, GENERIC} from "../state/locationData";
+import {CORDILLERA, ELYSIUM, ELYSIUM_MAX_X, ELYSIUM_MAX_Y, GENERIC} from "../state/locationData";
 import useClasses from "../hooks/useClasses";
 
 const styles = (theme) => ({
@@ -111,8 +111,9 @@ export const StartForm = () => {
                       color="secondary"
                       {...field}
                     >
-                      <MenuItem key="generic" value={GENERIC}>Generic</MenuItem>
                       <MenuItem key="elysium" value={ELYSIUM}>Elysium</MenuItem>
+                      <MenuItem key="cordillera" value={CORDILLERA}>Cordillera</MenuItem>
+                      <MenuItem key="generic" value={GENERIC}>Generic</MenuItem>
                     </Select>
                   </FormControl>)}
               />

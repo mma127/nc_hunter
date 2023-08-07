@@ -1,7 +1,7 @@
 import _ from "lodash";
 import {MAX_LENGTH, SIDE_LENGTH} from "../components/TileGrid";
 import {Location} from "../models/Location";
-import {getMaxX, getMaxY} from "./locationData";
+import {getMaxX, getMaxY, getPlaneData} from "./locationData";
 
 export function selectPlane(plane) {
   return {
@@ -32,6 +32,9 @@ export function addInitialResult(initialResult, plane) {
   yRange.forEach(y => {
     const yMap = new Map()
     xRange.forEach(x => {
+      const planeData = getPlaneData(x, y, plane)
+      if (_.isNil(planeData)) return // SKIP creating a location object if there is no corresponding tile in the JSON
+
       const location = new Location(x, y, plane)
       location.maybeUpdateNames(centerX, centerY, names)
       yMap.set(x, location)
