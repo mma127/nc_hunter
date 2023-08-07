@@ -1,4 +1,4 @@
-import {Box, Card, CardActionArea, Typography} from "@mui/material"
+import {Box, Card, CardActionArea, Tooltip, Typography} from "@mui/material"
 import {makeStyles} from "@mui/styles"
 import {useGrid} from "../GridContext";
 import {v4 as uuid} from 'uuid';
@@ -37,8 +37,30 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     textOverflow: "ellipsis",
     width: "100%"
+  },
+  tooltipHeader: {
+    fontWeight: 'bold'
+  },
+  description: {
+    color: theme.palette.warning.main,
+    display: 'flex',
+    justifyContent: 'flex-end'
   }
 }))
+
+const TooltipContent = ({x, y, revealedNames}) => {
+  const classes = useStyles();
+  return (
+    <>
+      <Typography variant="subtitle2"
+                  className={classes.tooltipHeader}>
+        [{x},{y}]
+      </Typography>
+      {revealedNames.map(name => <Box key={`revealed-${name}`}><Typography variant="body" className={classes.description}>{name}</Typography></Box>)}
+    </>
+  )
+}
+
 const Names = ({names}) => {
   const classes = useStyles();
   const nameContent = names.map(name => <Typography noWrap key={uuid()}>{name}</Typography>)
@@ -69,13 +91,16 @@ export const Tile = ({x, y, handleClick}) => {
   }
 
   return (
-    <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}>
-      <CardActionArea className={classes.cardActionArea} onClick={onClick}>
-        <Box>
-          <Typography>[{x},{y}]</Typography>
-        </Box>
-        {revealedNames ? <Names names={revealedNames}/> : null}
-      </CardActionArea>
-    </Card>
+    <Tooltip key={`tooltip-${x}-${y}`}
+             title={<TooltipContent x={x} y={y} revealedNames={revealedNames} />} arrow followCursor>
+      <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}>
+        <CardActionArea className={classes.cardActionArea} onClick={onClick}>
+          <Box>
+            <Typography>[{x},{y}]</Typography>
+          </Box>
+          {revealedNames ? <Names names={revealedNames}/> : null}
+        </CardActionArea>
+      </Card>
+    </Tooltip>
   )
 }
