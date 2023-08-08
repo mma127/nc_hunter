@@ -60,7 +60,7 @@ export const StartForm = () => {
     if (boundsErrors.length > 0) {
       boundsErrors.forEach(({name, type, message}) => setError(name, {type, message}))
     } else {
-      const parsedNames = data.revealed.split(',').map(str => str.trim());
+      const parsedNames = data.revealed.length > 0 ?  data.revealed.split(',').map(str => str.trim()) : [];
       const trackingResult = new TrackingResult(data.x, data.y, parsedNames)
       dispatch(selectPlane(data.plane))
       dispatch(addInitialResult(trackingResult, data.plane))
@@ -101,8 +101,8 @@ export const StartForm = () => {
             <Box className={classes.row} pt={1} pb={1}>
               <Controller
                 name="plane" control={control} defaultValue={ELYSIUM}
-                render={({ field }) => (
-                  <FormControl sx={{ minWidth: 150 }} size="small">
+                render={({field}) => (
+                  <FormControl sx={{minWidth: 150}} size="small">
                     <InputLabel id="plane-select-label">Select Plane</InputLabel>
                     <Select
                       labelId="plane-select"

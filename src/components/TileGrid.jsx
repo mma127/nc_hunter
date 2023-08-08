@@ -44,7 +44,6 @@ const createTile = ({x, y, handleOpen}) => {
  * 9x9 grid of times centered around the starting [x,y] coordinates
  */
 export const TileGrid = () => {
-  console.log("Render TILEGRID")
   const classes = useClasses(styles);
   const grid = useGrid();
   const dispatch = useGridDispatch()

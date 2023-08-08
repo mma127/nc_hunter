@@ -85,7 +85,6 @@ const Names = ({names}) => {
 }
 
 export const Tile = ({x, y, handleClick}) => {
-  console.log("Render Tile")
   const classes = useClasses(styles);
   const grid = useGrid();
   const tile = grid.tiles.get(y)?.get(x)

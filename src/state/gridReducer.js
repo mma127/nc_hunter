@@ -18,6 +18,7 @@ export function gridReducer(grid, action) {
       }
     }
     case 'add_initial_result': {
+      // console.log(action.data.tiles)
       return {
         ...grid,
         initialResult: action.data.initialResult,
@@ -33,6 +34,7 @@ export function gridReducer(grid, action) {
       }
     }
     case 'add_result': {
+      // console.log(action.data.tiles)
       return {
         ...grid,
         currentX: null,
