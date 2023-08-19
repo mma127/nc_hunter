@@ -1,7 +1,11 @@
 import {useReducer} from "react";
+import {FOV_2, MAX_LENGTH_9, SIDE_LENGTH_9} from "../components/TileGrid";
 
 export const INITIAL_STATE = {
   plane: null,
+  fov: null,
+  maxLength: null,
+  sideLength: null,
   currentX: null,
   currentY: null,
   initialResult: null,
@@ -15,6 +19,14 @@ export function gridReducer(grid, action) {
       return {
         ...grid,
         plane: action.data
+      }
+    }
+    case 'select_fov': {
+      return {
+        ...grid,
+        fov: action.data.fov,
+        maxLength: action.data.maxLength,
+        sideLength: action.data.sideLength,
       }
     }
     case 'add_initial_result': {

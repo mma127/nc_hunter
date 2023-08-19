@@ -8,9 +8,12 @@ import {TrackingDialog} from "./TrackingDialog";
 import {resetGrid, setNewTrackingCoordinates} from "../state/gridActions";
 import useClasses from "../hooks/useClasses";
 
-export const MAX_LENGTH = 9;
-export const SIDE_LENGTH = Math.floor(MAX_LENGTH / 2);
-export const FOV_LENGTH = 2;
+export const MAX_LENGTH_9 = 9;
+export const MAX_LENGTH_13 = 13;
+export const SIDE_LENGTH_9 = Math.floor(MAX_LENGTH_9 / 2);
+export const SIDE_LENGTH_13 = Math.floor(MAX_LENGTH_13 / 2);
+export const FOV_2 = 2;
+export const FOV_3 = 3;
 
 const styles = () => ({
   header: {
@@ -60,9 +63,9 @@ export const TileGrid = () => {
   const centerX = grid.initialResult.x
   const centerY = grid.initialResult.y
 
-  const topLeftX = centerX - SIDE_LENGTH
-  const topLeftY = centerY - SIDE_LENGTH
-  const bottomRightY = topLeftY + MAX_LENGTH
+  const topLeftX = centerX - grid.sideLength
+  const topLeftY = centerY - grid.sideLength
+  const bottomRightY = topLeftY + grid.maxLength
   const yRange = _.range(topLeftY, bottomRightY)
 
   const createRow = (startingX, limit, y) => {
@@ -85,7 +88,7 @@ export const TileGrid = () => {
         <Button onClick={handleReset}>Reset</Button>
       </Box>
       <Grid container spacing={1} sx={{marginTop: '1rem'}}>
-        {yRange.map(y => createRow(topLeftX, MAX_LENGTH, y))}
+        {yRange.map(y => createRow(topLeftX, grid.maxLength, y))}
       </Grid>
       <TrackingDialog open={open} onClose={handleClose} />
     </Container>

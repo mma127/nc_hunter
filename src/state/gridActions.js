@@ -1,7 +1,31 @@
 import _ from "lodash";
-import {MAX_LENGTH, SIDE_LENGTH} from "../components/TileGrid";
+import {
+  FOV_2,
+  FOV_3,
+  MAX_LENGTH_13,
+  MAX_LENGTH_9,
+  SIDE_LENGTH_13,
+  SIDE_LENGTH_9
+} from "../components/TileGrid";
 import {Location} from "../models/Location";
 import {getMaxX, getMaxY, getPlaneData} from "./locationData";
+
+function getFovLengths(fov) {
+  switch(fov){
+    case FOV_2:
+      return {
+        maxLength: MAX_LENGTH_9,
+        sideLength: SIDE_LENGTH_9
+      }
+    case FOV_3:
+      return {
+        maxLength: MAX_LENGTH_13,
+        sideLength: SIDE_LENGTH_13
+      }
+    default:
+      throw Error(`Unknown FOV value ${fov}`)
+  }
+}
 
 export function selectPlane(plane) {
   return {
@@ -10,21 +34,34 @@ export function selectPlane(plane) {
   }
 }
 
+export function selectFoV(fov) {
+  const lengths = getFovLengths(fov)
+  return {
+    type: "select_fov",
+    data: {
+      fov: fov,
+      maxLength: lengths.maxLength,
+      sideLength: lengths.sideLength
+    }
+  }
+}
+
 /**
  * Given user's initial tracking result, create tiles map and return payload for action
  */
-export function addInitialResult(initialResult, plane) {
+export function addInitialResult(initialResult, plane, fov) {
   const tiles = new Map()
 
   const names = initialResult.names
+  const lengths = getFovLengths(fov)
 
   // Assume initial [x,y] are in bounds of the plane
   const centerX = initialResult.x
   const centerY = initialResult.y
-  const topLeftX = centerX - SIDE_LENGTH
-  const topLeftY = centerY - SIDE_LENGTH
-  const bottomRightX = Math.min(topLeftX + MAX_LENGTH, getMaxX(plane) + 1)
-  const bottomRightY = Math.min(topLeftY + MAX_LENGTH, getMaxY(plane) + 1)
+  const topLeftX = centerX - lengths.sideLength
+  const topLeftY = centerY - lengths.sideLength
+  const bottomRightX = Math.min(topLeftX + lengths.maxLength, getMaxX(plane) + 1)
+  const bottomRightY = Math.min(topLeftY + lengths.maxLength, getMaxY(plane) + 1)
   const yRange = _.range(topLeftY, bottomRightY)
   const xRange = _.range(topLeftX, bottomRightX)
 
@@ -35,7 +72,7 @@ export function addInitialResult(initialResult, plane) {
       const planeData = getPlaneData(x, y, plane)
       if (_.isNil(planeData)) return // SKIP creating a location object if there is no corresponding tile in the JSON
 
-      const location = new Location(x, y, plane)
+      const location = new Location(x, y, plane, fov)
       location.maybeUpdateNames(centerX, centerY, names)
       yMap.set(x, location)
     })

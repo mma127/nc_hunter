@@ -1,15 +1,15 @@
 import _ from "lodash";
-import {FOV_LENGTH} from "../components/TileGrid";
 import {getPlaneData} from "../state/locationData";
 
 export class Location {
-  constructor(x, y, plane) {
+  constructor(x, y, plane, fov) {
     this.x = x;
     this.y = y;
     this.plane = plane;
     this.names = [];
     this.excludedNames = new Set();
     this.planeData = getPlaneData(x, y, plane);
+    this.fov = fov;
   }
 
   isNameExcluded(name) {
@@ -55,10 +55,10 @@ export class Location {
   }
 
   inFieldOfView(originX, originY) {
-    if ((originX - FOV_LENGTH) > this.x || this.x > (originX + FOV_LENGTH)) {
+    if ((originX - this.fov) > this.x || this.x > (originX + this.fov)) {
       return false
     }
-    if ((originY - FOV_LENGTH) > this.y || this.y > (originY + FOV_LENGTH)) {
+    if ((originY - this.fov) > this.y || this.y > (originY + this.fov)) {
       return false
     }
     return true

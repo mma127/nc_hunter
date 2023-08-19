@@ -5,9 +5,10 @@ import {yupResolver} from "@hookform/resolvers/yup";
 
 import {useGridDispatch} from "../GridContext"
 import {TrackingResult} from "../models/TrackingResult";
-import {addInitialResult, selectPlane} from "../state/gridActions";
+import {addInitialResult, selectFoV, selectPlane} from "../state/gridActions";
 import {CORDILLERA, ELYSIUM, ELYSIUM_MAX_X, ELYSIUM_MAX_Y, GENERIC, STYGIA} from "../state/locationData";
 import useClasses from "../hooks/useClasses";
+import {FOV_2, FOV_3} from "./TileGrid";
 
 const styles = (theme) => ({
   container: {
@@ -19,6 +20,10 @@ const styles = (theme) => ({
   row: {
     display: 'flex',
     justifyContent: "center"
+  },
+  selectRow: {
+    display: 'flex',
+    justifyContent: 'space-around'
   },
   coordWrapper: {
     margin: "0.5rem"
@@ -63,7 +68,8 @@ export const StartForm = () => {
       const parsedNames = data.revealed.length > 0 ?  data.revealed.split(',').map(str => str.trim()) : [];
       const trackingResult = new TrackingResult(data.x, data.y, parsedNames)
       dispatch(selectPlane(data.plane))
-      dispatch(addInitialResult(trackingResult, data.plane))
+      dispatch(selectFoV(data.fov))
+      dispatch(addInitialResult(trackingResult, data.plane, data.fov))
     }
   }
 
@@ -98,9 +104,9 @@ export const StartForm = () => {
                 />
               </Box>
             </Box>
-            <Box className={classes.row} pt={1} pb={1}>
+            <Box className={classes.selectRow} pt={1} pb={1}>
               <Controller
-                name="plane" control={control} defaultValue={ELYSIUM}
+                name="plane" control={control} defaultValue={STYGIA}
                 render={({field}) => (
                   <FormControl sx={{minWidth: 150}} size="small">
                     <InputLabel id="plane-select-label">Select Plane</InputLabel>
@@ -115,6 +121,23 @@ export const StartForm = () => {
                       <MenuItem key="cordillera" value={CORDILLERA}>Cordillera</MenuItem>
                       <MenuItem key="stygia" value={STYGIA}>Stygia</MenuItem>
                       <MenuItem key="generic" value={GENERIC}>Generic</MenuItem>
+                    </Select>
+                  </FormControl>)}
+              />
+              <Controller
+                name="fov" control={control} defaultValue={FOV_2}
+                render={({field}) => (
+                  <FormControl sx={{minWidth: 150}} size="small">
+                    <InputLabel id="fov-select-label">Select Field of View</InputLabel>
+                    <Select
+                      labelId="fov-select"
+                      id="fov-select"
+                      label="Select Field of View"
+                      color="secondary"
+                      {...field}
+                    >
+                      <MenuItem key="2" value={FOV_2}>2</MenuItem>
+                      <MenuItem key="3" value={FOV_3}>3</MenuItem>
                     </Select>
                   </FormControl>)}
               />
