@@ -7,13 +7,19 @@ export class Location {
     this.y = y;
     this.plane = plane;
     this.names = [];
+    this.originalNames = new Set();
     this.excludedNames = new Set();
     this.planeData = getPlaneData(x, y, plane);
     this.fov = fov;
+    this.seen = false;
   }
 
   isNameExcluded(name) {
     return this.excludedNames.has(name)
+  }
+
+  isNameOriginal(name) {
+    return this.originalNames.has(name)
   }
 
   updateNames(names) {
@@ -22,6 +28,15 @@ export class Location {
       // Find any previous names for this tile that are not in the new list, EXCLUDE them
       const namesToExclude = _.difference(this.names, names)
       this.excludeNames(namesToExclude)
+
+      // If this location has been seen previously, we should filter any names that are not in the originalNames list
+      if (this.seen) {
+        names = names.filter(name => this.isNameOriginal(name))
+      } else {
+        // This location has not been seen previously, set the originalNames set
+        this.setOriginalNames(names)
+      }
+
       // Update this.names to new names filtering any excluded names
       this.names = names.filter(name => !this.isNameExcluded(name))
     } else {
@@ -33,15 +48,21 @@ export class Location {
     names.forEach(name => this.excludedNames.add(name))
   }
 
+  setOriginalNames(names) {
+    names.forEach(name => this.originalNames.add(name))
+  }
+
   /** Did not find names for this location so exclude any previous names */
   clearNames() {
     this.excludeNames(this.names)
     this.names = []
   }
 
-  maybeUpdateNames(updateX, updateY, names) {
+  updateInitialNamesInFov(updateX, updateY, names) {
     if (this.inFieldOfView(updateX, updateY)) {
       this.updateNames(names)
+      this.setOriginalNames(names)
+      this.seen = true
     } else {
       this.excludeNames(names)
     }

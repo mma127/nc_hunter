@@ -73,7 +73,7 @@ export function addInitialResult(initialResult, plane, fov) {
       if (_.isNil(planeData)) return // SKIP creating a location object if there is no corresponding tile in the JSON
 
       const location = new Location(x, y, plane, fov)
-      location.maybeUpdateNames(centerX, centerY, names)
+      location.updateInitialNamesInFov(centerX, centerY, names)
       yMap.set(x, location)
     })
 
