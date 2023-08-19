@@ -1,3 +1,4 @@
+import _ from "lodash";
 import {FOV_LENGTH} from "../components/TileGrid";
 import {getPlaneData} from "../state/locationData";
 
@@ -17,6 +18,11 @@ export class Location {
 
   updateNames(names) {
     if (names.length > 0) {
+      // Have new set of names
+      // Find any previous names for this tile that are not in the new list, EXCLUDE them
+      const namesToExclude = _.difference(this.names, names)
+      this.excludeNames(namesToExclude)
+      // Update this.names to new names filtering any excluded names
       this.names = names.filter(name => !this.isNameExcluded(name))
     } else {
       this.clearNames()
