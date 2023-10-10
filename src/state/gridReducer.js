@@ -1,5 +1,4 @@
 import {useReducer} from "react";
-import {FOV_2, MAX_LENGTH_9, SIDE_LENGTH_9} from "../components/TileGrid";
 
 export const INITIAL_STATE = {
   plane: null,
@@ -10,7 +9,8 @@ export const INITIAL_STATE = {
   currentY: null,
   initialResult: null,
   trackingResults: [],
-  tiles: null
+  tiles: null,
+  characterNameToNpc: {}
 }
 
 export function gridReducer(grid, action) {
@@ -35,7 +35,8 @@ export function gridReducer(grid, action) {
         ...grid,
         initialResult: action.data.initialResult,
         trackingResults: [...grid.trackingResults, action.data.initialResult],
-        tiles: action.data.tiles
+        tiles: action.data.tiles,
+        characterNameToNpc: action.data.characterNameToNpc
       }
     }
     case 'set_tracking_coordinates': {
@@ -52,7 +53,8 @@ export function gridReducer(grid, action) {
         currentX: null,
         currentY: null,
         trackingResults: [...grid.trackingResults, action.data.result],
-        tiles: action.data.tiles
+        tiles: action.data.tiles,
+        characterNameToNpc: action.data.characterNameToNpc
       }
     }
     case 'reset': {

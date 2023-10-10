@@ -9,6 +9,7 @@ import {addInitialResult, selectFoV, selectPlane} from "../state/gridActions";
 import {CORDILLERA, ELYSIUM, ELYSIUM_MAX_X, ELYSIUM_MAX_Y, GENERIC, STYGIA} from "../state/locationData";
 import useClasses from "../hooks/useClasses";
 import {FOV_2, FOV_3} from "./TileGrid";
+import {fetchInitialCharacters} from "../async/nexusApi";
 
 const styles = (theme) => ({
   container: {
@@ -60,13 +61,14 @@ export const StartForm = () => {
     return errors
   }
 
-  const onSubmit = data => {
+  const onSubmit = async data => {
     const boundsErrors = checkPlaneBounds(data.x, data.y, data.plane)
     if (boundsErrors.length > 0) {
       boundsErrors.forEach(({name, type, message}) => setError(name, {type, message}))
     } else {
-      const parsedNames = data.revealed.length > 0 ?  data.revealed.split(',').map(str => str.trim()) : [];
-      const trackingResult = new TrackingResult(data.x, data.y, parsedNames)
+      const parsedNames = data.revealed.length > 0 ? data.revealed.split(',').map(str => str.trim()) : [];
+      const {players, npcs} = await fetchInitialCharacters(parsedNames);
+      const trackingResult = new TrackingResult(data.x, data.y, players, npcs)
       dispatch(selectPlane(data.plane))
       dispatch(selectFoV(data.fov))
       dispatch(addInitialResult(trackingResult, data.plane, data.fov))

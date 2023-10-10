@@ -6,6 +6,7 @@ import {TrackingResult} from "../models/TrackingResult";
 import {addResult} from "../state/gridActions";
 import {useGrid, useGridDispatch} from "../GridContext";
 import useClasses from "../hooks/useClasses";
+import {maybeFetchAdditionalCharacters} from "../async/nexusApi";
 
 const styles = () => ({
   formWrapper: {
@@ -35,6 +36,8 @@ export const TrackingDialog = ({open, onClose}) => {
   const currentX = grid.currentX;
   const currentY = grid.currentY;
 
+  const characterNameToNpc = grid.characterNameToNpc;
+
   const {handleSubmit, control, formState: {errors}} = useForm({
     resolver: yupResolver(schema),
   })
@@ -43,10 +46,11 @@ export const TrackingDialog = ({open, onClose}) => {
     onClose()
   }
 
-  const onSubmit = data => {
+  const onSubmit = async data => {
     const parsedNames = data.revealed.split(',').map(str => str.trim()).filter(str => str.length > 0);
-    const trackingResult = new TrackingResult(grid.currentX, grid.currentY, parsedNames)
-    dispatch(addResult(grid.tiles, trackingResult))
+    const {players, npcs} = await maybeFetchAdditionalCharacters(parsedNames, characterNameToNpc);
+    const trackingResult = new TrackingResult(grid.currentX, grid.currentY, players, npcs)
+    dispatch(addResult(grid.tiles, trackingResult, characterNameToNpc))
     handleClose()
   }
 

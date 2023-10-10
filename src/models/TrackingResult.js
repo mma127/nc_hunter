@@ -1,7 +1,8 @@
 export class TrackingResult {
-  constructor(x, y, names) {
+  constructor(x, y, playerNames, npcNames) {
     this.x = x;
     this.y = y;
-    this.names = names;
+    this.playerNames = playerNames;
+    this.npcNames = npcNames;
   }
 }

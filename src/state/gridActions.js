@@ -52,7 +52,8 @@ export function selectFoV(fov) {
 export function addInitialResult(initialResult, plane, fov) {
   const tiles = new Map()
 
-  const names = initialResult.names
+  const playerNames = initialResult.playerNames;
+  const npcNames = initialResult.npcNames;
   const lengths = getFovLengths(fov)
 
   // Assume initial [x,y] are in bounds of the plane
@@ -73,18 +74,23 @@ export function addInitialResult(initialResult, plane, fov) {
       if (_.isNil(planeData)) return // SKIP creating a location object if there is no corresponding tile in the JSON
 
       const location = new Location(x, y, plane, fov)
-      location.updateInitialNamesInFov(centerX, centerY, names)
+      location.updateInitialNamesInFov(centerX, centerY, playerNames, npcNames)
       yMap.set(x, location)
     })
 
     tiles.set(y, yMap)
   });
 
+  const characterNameToNpc = {};
+  playerNames.forEach(name => characterNameToNpc[name.toLowerCase()] = false);
+  npcNames.forEach(name => characterNameToNpc[name.toLowerCase()] = true);
+
   return {
     type: "add_initial_result",
     data: {
       initialResult: initialResult,
-      tiles: tiles
+      tiles: tiles,
+      characterNameToNpc: characterNameToNpc
     },
   }
 }
@@ -99,27 +105,34 @@ export function setNewTrackingCoordinates(x, y) {
   }
 }
 
-export function addResult(tiles, trackingResult) {
+export function addResult(tiles, trackingResult, characterNameToNpc) {
   const trackingX = trackingResult.x,
-    trackingY = trackingResult.y;
+    trackingY = trackingResult.y,
+    playerNames = trackingResult.playerNames,
+    npcNames = trackingResult.npcNames;
   for(const row of tiles.values()) {
     for(const location of row.values()) {
       // Is location in FOV of the tracking result?
       if (location.inFieldOfView(trackingX, trackingY)) {
         // If so, update names
-        location.updateNames(trackingResult.names)
+        location.updateNames(playerNames, npcNames)
       } else {
         // If not, remove tracking result names from location names
-        location.removeNames(trackingResult.names)
+        location.removeNames(playerNames, npcNames)
       }
     }
   }
+
+  const newCharacterNameToNpc = {...characterNameToNpc};
+  playerNames.forEach(name => newCharacterNameToNpc[name.toLowerCase()] = false);
+  npcNames.forEach(name => newCharacterNameToNpc[name.toLowerCase()] = true);
 
   return {
     type: "add_result",
     data: {
       result: trackingResult,
-      tiles: tiles
+      tiles: tiles,
+      characterNameToNpc: characterNameToNpc
     },
   }
 }
