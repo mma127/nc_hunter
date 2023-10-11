@@ -1,6 +1,5 @@
 import {Box, Card, CardActionArea, Tooltip, Typography} from "@mui/material"
 import {useGrid} from "../GridContext";
-import {v4 as uuid} from 'uuid';
 import _ from "lodash";
 import useClasses from "../hooks/useClasses";
 
@@ -12,12 +11,12 @@ const styles = (theme) => ({
     width: '7rem',
     margin: '0.25rem',
     '&.starting': {
-      borderSize: '0.5px',
+      borderWidth: '2px',
       borderStyle: 'solid',
       borderColor: theme.palette.error.dark
     },
     '&.nonstarting': {
-      borderSize: '0.5px',
+      borderWidth: '2px',
       borderStyle: 'solid',
       borderColor: theme.palette.error.main
     }
@@ -41,17 +40,26 @@ const styles = (theme) => ({
   tooltipHeader: {
     fontWeight: 'bold'
   },
+  name: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
   player: {
     color: theme.palette.warning.dark,
     fontWeight: "bold !important",
-    display: 'flex',
-    justifyContent: 'flex-end'
+    lineHeight: "1.1 !important"
   },
   npc: {
     color: theme.palette.warning.light,
     fontStyle: "italic",
-    display: 'flex',
-    justifyContent: 'flex-end'
+    lineHeight: "1.1 !important"
+  },
+  counts: {
+    display: "flex",
+    justifyContent: "space-between"
+  },
+  countText: {
+    fontSize: "0.65rem !important"
   }
 })
 
@@ -75,20 +83,60 @@ const TooltipContent = ({x, y, playerNames, npcNames, planeData}) => {
                   className={classes.tooltipHeader}>
         [{x},{y}] {name}
       </Typography>
-      {playerNames.map(name => <Box key={`revealed-${name}`}><Typography variant="body" className={classes.player}>{name}</Typography></Box>)}
-      {npcNames.map(name => <Box key={`revealed-${name}`}><Typography variant="body" className={classes.npc}>{name}</Typography></Box>)}
+      {playerNames.map(name => <Box key={`tooltip-${name}`} className={classes.name}><Typography variant="body" className={classes.player}>{name}</Typography></Box>)}
+      {npcNames.map(name => <Box key={`tooltip-${name}`} className={classes.name}><Typography variant="body" className={classes.npc}>{name}</Typography></Box>)}
     </>
   )
 }
 
+const AdditionalCounts = ({playersLeft, npcsLeft}) => {
+  const classes = useClasses(styles);
+
+  const playerCount = playersLeft > 0 ? <Typography className={`${classes.player} ${classes.countText}`}>+{playersLeft} Players</Typography> : <Box />;
+  const npcCount = npcsLeft > 0 ? <Typography className={`${classes.npc} ${classes.countText}`}>+{npcsLeft} NPCs</Typography> : <Box />;
+
+
+  return (
+    <Box className={classes.counts}>
+      {playerCount}
+      {npcCount}
+    </Box>
+  )
+}
+
+/** Show top three names, preferring player names over npc names */
 const Names = ({playerNames, npcNames}) => {
   const classes = useClasses(styles);
-  const players = playerNames.map(name => <Typography noWrap key={uuid()} className={classes.player}>{name}</Typography>)
-  const npcs = npcNames.map(name => <Typography noWrap key={uuid()} className={classes.npc}>{name}</Typography>)
+
+  let playerNamesToShow,
+    npcNamesToShow,
+    playersLeft,
+    npcsLeft;
+
+  // First add player names to show, up to 3
+  if (playerNames.length > 3) {
+    playerNamesToShow = playerNames.slice(0, 3)
+  } else {
+    playerNamesToShow = playerNames.slice()
+  }
+  const remainingSlots = 3 - playerNamesToShow.length
+  // Next, if playerNamesToShow is less than 3, add npc names up to limit
+  if (remainingSlots > 0) {
+    npcNamesToShow = npcNames.slice(0, remainingSlots)
+  } else {
+    npcNamesToShow = []
+  }
+
+  playersLeft = playerNames.length - (playerNamesToShow?.length || 0)
+  npcsLeft = npcNames.length - (npcNamesToShow?.length || 0)
+
+  const players = playerNamesToShow.map(name => <Box key={`name-${name}`} className={classes.name}><Typography noWrap className={classes.player}>{name}</Typography></Box>)
+  const npcs = npcNamesToShow.map(name => <Box key={`name-${name}`} className={classes.name}><Typography noWrap className={classes.npc}>{name}</Typography></Box>)
   return (
     <Box className={classes.trackedName}>
       {players}
       {npcs}
+      <AdditionalCounts playersLeft={playersLeft} npcsLeft={npcsLeft} />
     </Box>
   )
 }
