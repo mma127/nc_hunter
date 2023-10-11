@@ -10,7 +10,8 @@ export const INITIAL_STATE = {
   currentY: null,
   initialResult: null,
   trackingResults: [],
-  tiles: null
+  tiles: null,
+  charactersByName: {}
 }
 
 export function gridReducer(grid, action) {
@@ -35,7 +36,8 @@ export function gridReducer(grid, action) {
         ...grid,
         initialResult: action.data.initialResult,
         trackingResults: [...grid.trackingResults, action.data.initialResult],
-        tiles: action.data.tiles
+        tiles: action.data.tiles,
+        charactersByName: action.data.charactersByName
       }
     }
     case 'set_tracking_coordinates': {
@@ -52,7 +54,8 @@ export function gridReducer(grid, action) {
         currentX: null,
         currentY: null,
         trackingResults: [...grid.trackingResults, action.data.result],
-        tiles: action.data.tiles
+        tiles: action.data.tiles,
+        charactersByName: action.data.charactersByName
       }
     }
     case 'reset': {

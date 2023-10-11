@@ -1,6 +1,5 @@
 import {Box, Card, CardActionArea, Tooltip, Typography} from "@mui/material"
 import {useGrid} from "../GridContext";
-import {v4 as uuid} from 'uuid';
 import _ from "lodash";
 import useClasses from "../hooks/useClasses";
 
@@ -12,12 +11,12 @@ const styles = (theme) => ({
     width: '7rem',
     margin: '0.25rem',
     '&.starting': {
-      borderSize: '0.5px',
+      borderWidth: '2px',
       borderStyle: 'solid',
       borderColor: theme.palette.error.dark
     },
     '&.nonstarting': {
-      borderSize: '0.5px',
+      borderWidth: '2px',
       borderStyle: 'solid',
       borderColor: theme.palette.error.main
     }
@@ -32,7 +31,6 @@ const styles = (theme) => ({
     padding: '0.5rem !important',
   },
   trackedName: {
-    color: theme.palette.warning.main,
     textAlign: "right",
     alignSelf: 'flex-end',
     overflow: "hidden",
@@ -42,10 +40,26 @@ const styles = (theme) => ({
   tooltipHeader: {
     fontWeight: 'bold'
   },
-  description: {
-    color: theme.palette.warning.main,
+  name: {
     display: 'flex',
     justifyContent: 'flex-end'
+  },
+  player: {
+    color: theme.palette.warning.dark,
+    fontWeight: "bold !important",
+    lineHeight: "1.1 !important"
+  },
+  npc: {
+    color: theme.palette.warning.light,
+    fontStyle: "italic",
+    lineHeight: "1.1 !important"
+  },
+  counts: {
+    display: "flex",
+    justifyContent: "space-between"
+  },
+  countText: {
+    fontSize: "0.65rem !important"
   }
 })
 
@@ -60,7 +74,7 @@ const getLocationName = (planeData) => {
   return null
 }
 
-const TooltipContent = ({x, y, revealedNames, planeData}) => {
+const TooltipContent = ({x, y, playerNames, npcNames, planeData}) => {
   const classes = useClasses(styles);
   const name = getLocationName(planeData)
   return (
@@ -69,17 +83,60 @@ const TooltipContent = ({x, y, revealedNames, planeData}) => {
                   className={classes.tooltipHeader}>
         [{x},{y}] {name}
       </Typography>
-      {revealedNames.map(name => <Box key={`revealed-${name}`}><Typography variant="body" className={classes.description}>{name}</Typography></Box>)}
+      {playerNames.map(name => <Box key={`tooltip-${name}`} className={classes.name}><Typography variant="body" className={classes.player}>{name}</Typography></Box>)}
+      {npcNames.map(name => <Box key={`tooltip-${name}`} className={classes.name}><Typography variant="body" className={classes.npc}>{name}</Typography></Box>)}
     </>
   )
 }
 
-const Names = ({names}) => {
+const AdditionalCounts = ({playersLeft, npcsLeft}) => {
   const classes = useClasses(styles);
-  const nameContent = names.map(name => <Typography noWrap key={uuid()}>{name}</Typography>)
+
+  const playerCount = playersLeft > 0 ? <Typography className={`${classes.player} ${classes.countText}`}>+{playersLeft} Players</Typography> : <Box />;
+  const npcCount = npcsLeft > 0 ? <Typography className={`${classes.npc} ${classes.countText}`}>+{npcsLeft} NPCs</Typography> : <Box />;
+
+
+  return (
+    <Box className={classes.counts}>
+      {playerCount}
+      {npcCount}
+    </Box>
+  )
+}
+
+/** Show top three names, preferring player names over npc names */
+const Names = ({playerNames, npcNames}) => {
+  const classes = useClasses(styles);
+
+  let playerNamesToShow,
+    npcNamesToShow,
+    playersLeft,
+    npcsLeft;
+
+  // First add player names to show, up to 3
+  if (playerNames.length > 3) {
+    playerNamesToShow = playerNames.slice(0, 3)
+  } else {
+    playerNamesToShow = playerNames.slice()
+  }
+  const remainingSlots = 3 - playerNamesToShow.length
+  // Next, if playerNamesToShow is less than 3, add npc names up to limit
+  if (remainingSlots > 0) {
+    npcNamesToShow = npcNames.slice(0, remainingSlots)
+  } else {
+    npcNamesToShow = []
+  }
+
+  playersLeft = playerNames.length - (playerNamesToShow?.length || 0)
+  npcsLeft = npcNames.length - (npcNamesToShow?.length || 0)
+
+  const players = playerNamesToShow.map(name => <Box key={`name-${name}`} className={classes.name}><Typography noWrap className={classes.player}>{name}</Typography></Box>)
+  const npcs = npcNamesToShow.map(name => <Box key={`name-${name}`} className={classes.name}><Typography noWrap className={classes.npc}>{name}</Typography></Box>)
   return (
     <Box className={classes.trackedName}>
-      {nameContent}
+      {players}
+      {npcs}
+      <AdditionalCounts playersLeft={playersLeft} npcsLeft={npcsLeft} />
     </Box>
   )
 }
@@ -100,8 +157,19 @@ export const Tile = ({x, y, handleClick}) => {
       isNonStartingTrackingTile = false
     }
 
-    const revealedNames = tile.names;
+    const characters = tile.characters;
     const planeData = tile.planeData;
+
+    const playerNames = [],
+      npcNames = [];
+    characters.forEach(c => {
+      const name = c.displayName();
+      if(c.isNpc()) {
+        npcNames.push(name);
+      } else {
+        playerNames.push(name);
+      }
+    })
 
     const onClick = () => {
       handleClick(x, y)
@@ -109,7 +177,7 @@ export const Tile = ({x, y, handleClick}) => {
 
     return (
       <Tooltip key={`tooltip-${x}-${y}`}
-               title={<TooltipContent x={x} y={y} revealedNames={revealedNames} planeData={planeData}/>} arrow followCursor>
+               title={<TooltipContent x={x} y={y} playerNames={playerNames} npcNames={npcNames} planeData={planeData}/>} arrow followCursor>
         <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}
               sx={{ backgroundColor: planeData ? `#${planeData.color}` : 'inherit' }}
         >
@@ -117,7 +185,7 @@ export const Tile = ({x, y, handleClick}) => {
             <Box>
               <Typography>[{x},{y}]</Typography>
             </Box>
-            {revealedNames ? <Names names={revealedNames}/> : null}
+            {(playerNames || npcNames) ? <Names playerNames={playerNames} npcNames={npcNames} /> : null}
           </CardActionArea>
         </Card>
       </Tooltip>
