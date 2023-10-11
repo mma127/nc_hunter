@@ -52,7 +52,7 @@ export function selectFoV(fov) {
 export function addInitialResult(initialResult, plane, fov) {
   const tiles = new Map()
 
-  const names = initialResult.names
+  const characters = initialResult.characters
   const lengths = getFovLengths(fov)
 
   // Assume initial [x,y] are in bounds of the plane
@@ -73,18 +73,24 @@ export function addInitialResult(initialResult, plane, fov) {
       if (_.isNil(planeData)) return // SKIP creating a location object if there is no corresponding tile in the JSON
 
       const location = new Location(x, y, plane, fov)
-      location.updateInitialNamesInFov(centerX, centerY, names)
+      location.updateInitialCharactersInFov(centerX, centerY, characters)
       yMap.set(x, location)
     })
 
     tiles.set(y, yMap)
   });
 
+  const charactersByName = characters.reduce((accumulator, currentValue) => {
+    accumulator[currentValue.lowerName()] = currentValue
+    return accumulator
+  }, {})
+
   return {
     type: "add_initial_result",
     data: {
       initialResult: initialResult,
-      tiles: tiles
+      tiles: tiles,
+      charactersByName: charactersByName
     },
   }
 }
@@ -99,27 +105,36 @@ export function setNewTrackingCoordinates(x, y) {
   }
 }
 
-export function addResult(tiles, trackingResult) {
+export function addResult(tiles, trackingResult, charactersByName) {
   const trackingX = trackingResult.x,
-    trackingY = trackingResult.y;
+    trackingY = trackingResult.y,
+    characters = trackingResult.characters;
   for(const row of tiles.values()) {
     for(const location of row.values()) {
       // Is location in FOV of the tracking result?
       if (location.inFieldOfView(trackingX, trackingY)) {
         // If so, update names
-        location.updateNames(trackingResult.names)
+        location.updateCharacters(characters)
       } else {
         // If not, remove tracking result names from location names
-        location.removeNames(trackingResult.names)
+        location.removeCharacters(characters)
       }
     }
   }
+
+  const newCharactersByName = {...charactersByName};
+  characters.forEach(character => {
+    if (!_.has(newCharactersByName, character.lowerName())) {
+      _.set(newCharactersByName, character.lowerName(), character)
+    }
+  })
 
   return {
     type: "add_result",
     data: {
       result: trackingResult,
-      tiles: tiles
+      tiles: tiles,
+      charactersByName: newCharactersByName
     },
   }
 }

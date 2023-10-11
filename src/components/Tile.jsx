@@ -32,7 +32,6 @@ const styles = (theme) => ({
     padding: '0.5rem !important',
   },
   trackedName: {
-    color: theme.palette.warning.main,
     textAlign: "right",
     alignSelf: 'flex-end',
     overflow: "hidden",
@@ -42,8 +41,15 @@ const styles = (theme) => ({
   tooltipHeader: {
     fontWeight: 'bold'
   },
-  description: {
-    color: theme.palette.warning.main,
+  player: {
+    color: theme.palette.warning.dark,
+    fontWeight: "bold !important",
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  npc: {
+    color: theme.palette.warning.light,
+    fontStyle: "italic",
     display: 'flex',
     justifyContent: 'flex-end'
   }
@@ -60,7 +66,7 @@ const getLocationName = (planeData) => {
   return null
 }
 
-const TooltipContent = ({x, y, revealedNames, planeData}) => {
+const TooltipContent = ({x, y, playerNames, npcNames, planeData}) => {
   const classes = useClasses(styles);
   const name = getLocationName(planeData)
   return (
@@ -69,17 +75,20 @@ const TooltipContent = ({x, y, revealedNames, planeData}) => {
                   className={classes.tooltipHeader}>
         [{x},{y}] {name}
       </Typography>
-      {revealedNames.map(name => <Box key={`revealed-${name}`}><Typography variant="body" className={classes.description}>{name}</Typography></Box>)}
+      {playerNames.map(name => <Box key={`revealed-${name}`}><Typography variant="body" className={classes.player}>{name}</Typography></Box>)}
+      {npcNames.map(name => <Box key={`revealed-${name}`}><Typography variant="body" className={classes.npc}>{name}</Typography></Box>)}
     </>
   )
 }
 
-const Names = ({names}) => {
+const Names = ({playerNames, npcNames}) => {
   const classes = useClasses(styles);
-  const nameContent = names.map(name => <Typography noWrap key={uuid()}>{name}</Typography>)
+  const players = playerNames.map(name => <Typography noWrap key={uuid()} className={classes.player}>{name}</Typography>)
+  const npcs = npcNames.map(name => <Typography noWrap key={uuid()} className={classes.npc}>{name}</Typography>)
   return (
     <Box className={classes.trackedName}>
-      {nameContent}
+      {players}
+      {npcs}
     </Box>
   )
 }
@@ -100,8 +109,19 @@ export const Tile = ({x, y, handleClick}) => {
       isNonStartingTrackingTile = false
     }
 
-    const revealedNames = tile.names;
+    const characters = tile.characters;
     const planeData = tile.planeData;
+
+    const playerNames = [],
+      npcNames = [];
+    characters.forEach(c => {
+      const name = c.displayName();
+      if(c.isNpc()) {
+        npcNames.push(name);
+      } else {
+        playerNames.push(name);
+      }
+    })
 
     const onClick = () => {
       handleClick(x, y)
@@ -109,7 +129,7 @@ export const Tile = ({x, y, handleClick}) => {
 
     return (
       <Tooltip key={`tooltip-${x}-${y}`}
-               title={<TooltipContent x={x} y={y} revealedNames={revealedNames} planeData={planeData}/>} arrow followCursor>
+               title={<TooltipContent x={x} y={y} playerNames={playerNames} npcNames={npcNames} planeData={planeData}/>} arrow followCursor>
         <Card className={`${classes.wrapper} ${isStartingTile ? "starting" : null} ${isNonStartingTrackingTile ? "nonstarting" : null}`}
               sx={{ backgroundColor: planeData ? `#${planeData.color}` : 'inherit' }}
         >
@@ -117,7 +137,7 @@ export const Tile = ({x, y, handleClick}) => {
             <Box>
               <Typography>[{x},{y}]</Typography>
             </Box>
-            {revealedNames ? <Names names={revealedNames}/> : null}
+            {(playerNames || npcNames) ? <Names playerNames={playerNames} npcNames={npcNames} /> : null}
           </CardActionArea>
         </Card>
       </Tooltip>

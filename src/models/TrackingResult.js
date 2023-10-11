@@ -1,7 +1,7 @@
 export class TrackingResult {
-  constructor(x, y, names) {
+  constructor(x, y, characters) {
     this.x = x;
     this.y = y;
-    this.names = names;
+    this.characters = characters;
   }
 }

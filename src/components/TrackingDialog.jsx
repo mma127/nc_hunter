@@ -6,6 +6,7 @@ import {TrackingResult} from "../models/TrackingResult";
 import {addResult} from "../state/gridActions";
 import {useGrid, useGridDispatch} from "../GridContext";
 import useClasses from "../hooks/useClasses";
+import {maybeFetchAdditionalCharacters} from "../state/characters";
 
 const styles = () => ({
   formWrapper: {
@@ -34,6 +35,7 @@ export const TrackingDialog = ({open, onClose}) => {
 
   const currentX = grid.currentX;
   const currentY = grid.currentY;
+  const charactersByName = grid.charactersByName;
 
   const {handleSubmit, control, formState: {errors}} = useForm({
     resolver: yupResolver(schema),
@@ -43,10 +45,11 @@ export const TrackingDialog = ({open, onClose}) => {
     onClose()
   }
 
-  const onSubmit = data => {
+  const onSubmit = async data => {
     const parsedNames = data.revealed.split(',').map(str => str.trim()).filter(str => str.length > 0);
-    const trackingResult = new TrackingResult(grid.currentX, grid.currentY, parsedNames)
-    dispatch(addResult(grid.tiles, trackingResult))
+    const characters = await maybeFetchAdditionalCharacters(parsedNames, charactersByName);
+    const trackingResult = new TrackingResult(grid.currentX, grid.currentY, characters)
+    dispatch(addResult(grid.tiles, trackingResult, charactersByName))
     handleClose()
   }
 
