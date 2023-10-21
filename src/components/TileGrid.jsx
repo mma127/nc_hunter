@@ -24,7 +24,7 @@ const styles = () => ({
   rowWrapper: {
     display: 'flex',
     justifyContent: 'center',
-    flexWrap: 'nowrap'
+    flexWrap: 'nowrap !important'
   },
   modal: {
     position: 'absolute',
