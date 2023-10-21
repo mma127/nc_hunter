@@ -9,7 +9,7 @@ import {addInitialResult, selectFoV, selectPlane} from "../state/gridActions";
 import {CORDILLERA, ELYSIUM, ELYSIUM_MAX_X, ELYSIUM_MAX_Y, GENERIC, STYGIA} from "../state/locationData";
 import useClasses from "../hooks/useClasses";
 import {FOV_2, FOV_3} from "./TileGrid";
-import {fetchInitialCharacters} from "../state/characters";
+import {fetchInitialCharacters, parseNames} from "../state/characters";
 
 const styles = (theme) => ({
   container: {
@@ -66,7 +66,7 @@ export const StartForm = () => {
     if (boundsErrors.length > 0) {
       boundsErrors.forEach(({name, type, message}) => setError(name, {type, message}))
     } else {
-      const parsedNames = data.revealed.length > 0 ?  data.revealed.split(',').map(str => str.trim()) : [];
+      const parsedNames = parseNames(data.revealed);
       const characters = await fetchInitialCharacters(parsedNames);
       const trackingResult = new TrackingResult(data.x, data.y, characters)
       dispatch(selectPlane(data.plane))
@@ -111,7 +111,7 @@ export const StartForm = () => {
                 name="plane" control={control} defaultValue={STYGIA}
                 render={({field}) => (
                   <FormControl sx={{minWidth: 150}} size="small">
-                    <InputLabel id="plane-select-label">Select Plane</InputLabel>
+                    <InputLabel id="plane-select-label">Plane</InputLabel>
                     <Select
                       labelId="plane-select"
                       id="plane-select"
@@ -130,11 +130,11 @@ export const StartForm = () => {
                 name="fov" control={control} defaultValue={FOV_2}
                 render={({field}) => (
                   <FormControl sx={{minWidth: 150}} size="small">
-                    <InputLabel id="fov-select-label">Select Field of View</InputLabel>
+                    <InputLabel id="fov-select-label">Tracker Range</InputLabel>
                     <Select
                       labelId="fov-select"
                       id="fov-select"
-                      label="Select Field of View"
+                      label="Select Tracker Range"
                       color="secondary"
                       {...field}
                     >

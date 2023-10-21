@@ -6,7 +6,7 @@ import {TrackingResult} from "../models/TrackingResult";
 import {addResult} from "../state/gridActions";
 import {useGrid, useGridDispatch} from "../GridContext";
 import useClasses from "../hooks/useClasses";
-import {maybeFetchAdditionalCharacters} from "../state/characters";
+import {maybeFetchAdditionalCharacters, parseNames} from "../state/characters";
 
 const styles = () => ({
   formWrapper: {
@@ -46,7 +46,7 @@ export const TrackingDialog = ({open, onClose}) => {
   }
 
   const onSubmit = async data => {
-    const parsedNames = data.revealed.split(',').map(str => str.trim()).filter(str => str.length > 0);
+    const parsedNames = parseNames(data.revealed);
     const characters = await maybeFetchAdditionalCharacters(parsedNames, charactersByName);
     const trackingResult = new TrackingResult(grid.currentX, grid.currentY, characters)
     dispatch(addResult(grid.tiles, trackingResult, charactersByName))

@@ -14,8 +14,8 @@ function getFovLengths(fov) {
   switch(fov){
     case FOV_2:
       return {
-        maxLength: MAX_LENGTH_9,
-        sideLength: SIDE_LENGTH_9
+        maxLength: MAX_LENGTH_13,
+        sideLength: SIDE_LENGTH_13
       }
     case FOV_3:
       return {

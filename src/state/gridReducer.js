@@ -1,5 +1,4 @@
 import {useReducer} from "react";
-import {FOV_2, MAX_LENGTH_9, SIDE_LENGTH_9} from "../components/TileGrid";
 
 export const INITIAL_STATE = {
   plane: null,
